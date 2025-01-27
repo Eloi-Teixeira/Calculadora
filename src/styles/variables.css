@@ -53,3 +53,7 @@ header {
 section {
   padding-block: 80px;
 }
+
+svg {
+  color: var(--brown);
+}
