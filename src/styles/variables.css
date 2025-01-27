@@ -62,7 +62,7 @@ svg {
 .section-container {
   padding-block: 80px;
   padding-left: 120px;
-  max-height: calc(100dvh - 80px - 20px);
+  max-height: calc(100dvh - 80px - 105px);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
