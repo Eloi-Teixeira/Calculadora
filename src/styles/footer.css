@@ -1,0 +1,98 @@
+.footer-container {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+.footer-text {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer-text p {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.footer-text a {
+  margin-inline: 0.5rem;
+  position: relative;
+  transition: 0.3s;
+  z-index: 1;
+  padding-inline: 0.3rem;
+}
+
+.footer-text a:hover {
+  color: #554c4c;
+}
+
+.footer-text a::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  transition: 0.3s;
+}
+
+.footer-text a::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--golden);
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.footer-text a:hover::before {
+  transform-origin: center left;
+  transform: scaleX(1);
+}
+
+.footer-text a:hover::after {
+  background-color: var(--golden);
+}
+
+.footer-text span.separator-vertical {
+  width: 2px;
+  opacity: 0.2;
+  margin-inline: 12px;
+  background-color: var(--white);
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-media a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.social-media svg {
+  width: 24px;
+  height: 24px;
+  color: var(--white);
+}
+
+.social-media a:hover svg,
+.social-media a:hover {
+  color: var(--golden);
+  transform: scale(1.05);
+}

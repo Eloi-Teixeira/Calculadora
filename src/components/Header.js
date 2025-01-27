@@ -1,7 +1,7 @@
 import React from 'react';
-import Logo from '../assets/imgs/logo/logo.png';
-import { ReactComponent as MoonSVG } from '../assets/imgs/icons/moon.svg';
-import { ReactComponent as SunSVG } from '../assets/imgs/icons/sun.svg';
+import Logo from '../assets/logo/logo.png';
+import { ReactComponent as MoonSVG } from '../assets/icons/moon.svg';
+import { ReactComponent as SunSVG } from '../assets/icons/sun.svg';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
@@ -36,7 +36,7 @@ const Header = () => {
       <div>
         <NavLink to="/" className="logo-container">
           <div className="logo-content">
-            <img src={Logo} alt="Logo" width='54px' height='51px' />
+            <img src={Logo} alt="Logo da Calculadora Completa" width='54px' height='51px' />
           </div>
         </NavLink>
       </div>

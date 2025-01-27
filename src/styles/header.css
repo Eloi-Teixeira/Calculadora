@@ -6,10 +6,10 @@
   height: 100%;
   padding-left: 120px;
   border-end-start-radius: 30px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.nav-pages ul{
+.nav-pages ul {
   display: flex;
   height: 100%;
   gap: 60px;
@@ -27,7 +27,7 @@
 .nav-pages a:hover {
   color: var(--brown);
   background-color: var(--white);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .nav-pages a.active {
@@ -54,14 +54,14 @@
 
 .nav-pages .link-ornament::after,
 .nav-pages .link-ornament::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   width: 0;
   height: 0px;
   background-color: var(--brown);
   z-index: 2;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .nav-pages .link-ornament::after {
@@ -83,17 +83,16 @@
   left: -20px;
 }
 
-.nav-pages a:first-child.active ~  .link-ornament.aside-expanded {
+.nav-pages a:first-child.active ~ .link-ornament.aside-expanded {
   width: calc(100% + 20px);
-  left: 0px ;
+  left: 0px;
 }
 
 .nav-pages a:first-child.active ~ .link-ornament.aside-expanded::after {
   opacity: 0;
-  transition: .2s;
+  transition: 0.2s;
   visibility: hidden;
 }
-
 
 .nav-pages-item {
   display: flex;
@@ -101,14 +100,13 @@
   align-self: end;
 }
 
-
 .logo-container {
   display: grid;
   place-content: center;
   padding: 5px 0 0 5px;
   border-end-end-radius: 50%;
   background-color: var(--brown);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .logo-content {
@@ -120,7 +118,6 @@
   width: 75px;
   height: 75px;
 }
-
 
 .btn-theme {
   display: flex;

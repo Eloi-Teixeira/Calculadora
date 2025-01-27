@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { ReactComponent as PiSvg } from '../assets/imgs/icons/pi.svg';
-import { ReactComponent as RootSvg } from '../assets/imgs/icons/root.svg';
-import { ReactComponent as PercentSvg } from '../assets/imgs/icons/percent.svg';
-import { ReactComponent as WeightSvg } from '../assets/imgs/icons/weight.svg';
-import { ReactComponent as TriangleSvg } from '../assets/imgs/icons/triangle.svg';
-import { ReactComponent as AngleSvg } from '../assets/imgs/icons/angle.svg';
-import { ReactComponent as BoxArrowSvg } from '../assets/imgs/icons/box-arrow.svg';
+import { ReactComponent as PiSvg } from '../assets/icons/pi.svg';
+import { ReactComponent as RootSvg } from '../assets/icons/root.svg';
+import { ReactComponent as PercentSvg } from '../assets/icons/percent.svg';
+import { ReactComponent as WeightSvg } from '../assets/icons/weight.svg';
+import { ReactComponent as TriangleSvg } from '../assets/icons/triangle.svg';
+import { ReactComponent as AngleSvg } from '../assets/icons/angle.svg';
+import { ReactComponent as BoxArrowSvg } from '../assets/icons/box-arrow.svg';
 
 const Aside = () => {
   const [expanded, setExpanded] = React.useState(false);
