@@ -111,8 +111,13 @@
   gap: 10px;
 }
 
+.aside-container.expanded button svg {
+  transform: rotate(180deg);
+}
+
 .aside-container.expanded .text-option {
   opacity: initial;
   pointer-events: all;
   transform: translateX(0);
 }
+

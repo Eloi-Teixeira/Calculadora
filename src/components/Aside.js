@@ -32,27 +32,27 @@ const Aside = () => {
   return (
     <aside className={`aside-container ${expanded ? 'expanded' : ''}`}>
       <nav className="aside-menu">
-        <NavLink to="/algebra">
+        <NavLink to="calc/algebra">
           <PiSvg />
           <span className={`text-option`}>Algebra</span>
         </NavLink>
-        <NavLink to="percent">
+        <NavLink to="calc/percent">
           <PercentSvg />
           <span className={`text-option`}>Porcentagem</span>
         </NavLink>
-        <NavLink to='radiation'>
+        <NavLink to='calc/radiation'>
           <RootSvg />
           <span className={`text-option`}>Radiciação</span>
         </NavLink>
-        <NavLink to="geometry">
+        <NavLink to="calc/geometry">
           <TriangleSvg />
           <span className={`text-option`}>Geométria</span>
         </NavLink>
-        <NavLink to="angle">
+        <NavLink to="calc/angle">
           <AngleSvg />
           <span className={`text-option`}>Angulo</span>
         </NavLink>
-        <NavLink to="weight">
+        <NavLink to="calc/weight">
           <WeightSvg />
           <span className={`text-option`}>Peso</span>
         </NavLink>
