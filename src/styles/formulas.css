@@ -1,0 +1,59 @@
+.formula-container {
+  display: grid;
+  grid-template-columns: 1fr auto 2fr;
+}
+
+.example {
+  width: 100%;
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  margin-bottom: 1.25rem;
+}
+
+.formula-response {
+  display: grid;
+  grid-template-areas:
+    'example example'
+    'titleForm  titleResponse'
+    'formula1  formula2'
+    'button  button';
+  gap: 10px;
+  max-width: 500px;
+}
+
+.formula-response p.example {grid-area: example;}
+.formula-response h4:first-of-type {grid-area: titleForm;}
+.formula-response h4:last-of-type {grid-area: titleResponse;}
+.formula-response ul:first-of-type {grid-area: formula1;}
+.formula-response ul:last-of-type {grid-area: formula2;}
+.formula-response button {grid-area: button;}
+
+.formula-container ul li{
+  font-size: 1rem;
+}
+
+.formula-response ul input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  width:  3rem;
+  border-bottom: 2px solid var(--brown);
+  transition: .3s;
+}
+
+.formula-response ul input:focus {
+  border-bottom: 2px solid var(--golden);
+}
+
+.button-calculate {
+  padding: 1rem 1.5rem;
+  background-color: var(--golden);
+  color: var(--brown);
+  border-radius: 5px;
+  font-weight:  bold;
+}
+
+.formula-container ul li strong{
+  font-family: 'Source Code Pro', monospace;
+}

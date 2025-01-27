@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
   return (
     <>
-      <section className="home-container section-container">
+      <section className="section-container">
         <h1>Bem Vindo à Calculadora Completa</h1>
         <p>
           Sua ferramenta definitiva para cálculos rápidos, precisos e

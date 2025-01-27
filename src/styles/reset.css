@@ -45,12 +45,14 @@ select,
 textarea {
   width: 100%;
   outline: none;
+  box-shadow: none; 
 }
 
 button {
   cursor: pointer;
 }
 
+input:focus,
 button:focus {
   outline: none;
 }

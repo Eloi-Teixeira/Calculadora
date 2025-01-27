@@ -30,8 +30,8 @@ header .container {
 body {
   background-color: var(--white);
   color: var(--brown);
-  transition: .3s;
-  font-family: "Nunito Sans", sans-serif;
+  transition: 0.3s;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 body.dark-mode {
@@ -51,6 +51,10 @@ header {
   color: var(--white);
 }
 
+ul strong{
+  margin-right: 0.5rem;
+}
+
 svg {
   color: var(--brown);
 }
@@ -59,41 +63,71 @@ svg {
   padding-block: 80px;
   padding-left: 120px;
   max-height: calc(100dvh - 80px - 20px);
-
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
-.section-container p{
+.section-container p {
   max-width: 800px;
   font-size: 1.25rem;
 }
 
-.section-container h1{
+.section-container h1 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
 
-.section-container ul{
+.section-container ul {
   margin-block: 1.5rem;
 }
 
-.section-container li{
+.section-container li {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
-
+  display: flex;
+  align-items: center;
 }
 
-.section-container li::before{
-  content: "";
+.section-container li::before {
+  content: '';
   display: inline-block;
   width: 8px;
   height: 8px;
   border-radius: 100%;
-  transform: translateY(-50%);
   background-color: var(--golden);
   margin-right: 1rem;
 }
 
 .section-container h2 {
   font-size: 2rem;
+  margin-block: 1.5rem;
+}
+
+.section-container h3 {
+  font-size: 1.6rem;
+  margin-block: 1.5rem;
+}
+
+.section-container h4 {
+  font-size: 1.25rem;
+}
+
+.section-container .separator-horizontal {
+  width: 80%;
+  height: 2px;
+  border-radius: 100%;
+  background-color: var(--brown);
+  transform: translateY(-1rem);
+}
+
+.section-container .separator-vertical {
+  width: 2px;
+  height: 90%;
+  place-self: center;
+  border-radius: 100%;
+  background-color: var(--brown);
+  opacity: 0.2;
+  margin-inline: 2rem;
 }
