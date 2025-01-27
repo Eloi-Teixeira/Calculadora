@@ -28,18 +28,7 @@ const Header = () => {
       }
     };
 
-    const activeLinkStyle = () => {
-      const li = document.querySelector('.nav-pages-item');
-      const link = document.querySelector('.nav-pages-item a');
-      if (link.classList.contains('active')) {
-        li.classList.add('active');
-      } else {
-        li.classList.remove('active');
-      }
-    };
-
     autoThemeChange();
-    activeLinkStyle();
   }, []);
 
   return (
@@ -47,7 +36,7 @@ const Header = () => {
       <div>
         <NavLink to="/" className="logo-container">
           <div className="logo-content">
-            <img src={Logo} alt="Logo" />
+            <img src={Logo} alt="Logo" width='54px' height='51px' />
           </div>
         </NavLink>
       </div>
@@ -69,7 +58,7 @@ const Header = () => {
           </ul>
         </nav>
         <div>
-          <button className="btn-theme" onClick={handleThemeChange}>
+          <button className="btn-theme" aria-label='Troca de tema' onClick={handleThemeChange}>
             <MoonSVG className="sun" />
             <SunSVG className="moon" />
           </button>

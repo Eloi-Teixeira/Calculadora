@@ -4,7 +4,7 @@
   width: 100%;
   background-color: var(--brown);
   height: 100%;
-  padding-left: 110px;
+  padding-left: 120px;
   border-end-start-radius: 30px;
   transition: .3s;
 }
@@ -61,7 +61,7 @@
   height: 0px;
   background-color: var(--brown);
   z-index: 2;
-  transition: 1s;
+  transition: .3s;
 }
 
 .nav-pages .link-ornament::after {

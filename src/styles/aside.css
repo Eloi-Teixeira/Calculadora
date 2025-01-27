@@ -38,6 +38,7 @@
   justify-content: center;
   margin: 20px 0;
   position: relative;
+  transition: .3s;
 }
 
 .aside-container a.active,
@@ -83,8 +84,8 @@
   left: 68px;
   opacity: 0;
   pointer-events: none;
-  transition: 0.5s;
-  transform: translateX(-20px);
+  transition: 0.3s;
+  transform: translateX(-40px);
 }
 
 /* --------------------------------------------------------------------------------------------------
@@ -92,12 +93,12 @@
 ------------------------------------------------------------------------------------------------------*/
 
 .aside-container.expanded {
-  width: 190px;
+  width: 200px;
   border-radius: 0;
 }
 
 .aside-container.expanded a {
-  width: 170px;
+  width: 180px;
   justify-content: start;
   font-size: 1.1rem;
   padding-left: 10px;
@@ -106,7 +107,7 @@
 
 .aside-container.expanded button {
   justify-content: start;
-  width: 170px;
+  width: 180px;
   gap: 10px;
 }
 

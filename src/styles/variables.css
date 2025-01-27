@@ -31,6 +31,7 @@ body {
   background-color: var(--white);
   color: var(--brown);
   transition: .3s;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 body.dark-mode {
