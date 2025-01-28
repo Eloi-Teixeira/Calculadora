@@ -40,7 +40,7 @@ const Aside = () => {
           <PercentSvg />
           <span className={`text-option`}>Porcentagem</span>
         </NavLink>
-        <NavLink to='calc/radiation'>
+        <NavLink to='calc/rooting'>
           <RootSvg />
           <span className={`text-option`}>Radiciação</span>
         </NavLink>

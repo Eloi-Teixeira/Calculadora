@@ -1,10 +1,12 @@
 import React from 'react';
 
 const FormulaResponse = ({example, inputValues, inputIDs}) => {
+  const numberExamples = inputValues.length - 1;
+  
   return (
     <div className="formula-response">
       <p className="example">{example}</p>
-      <h4>Preencha {inputValues.length} valores</h4>
+      <h4>Preencha {numberExamples} {numberExamples <= 1 ? 'valor' : 'valores'}</h4>
       <ul>
         {inputValues.map((input, index) => (
           <li key={input + index}>

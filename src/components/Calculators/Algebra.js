@@ -1,18 +1,12 @@
 import React from 'react';
 import FormulaContainer from '../Formula/FormulaContainer';
+import Intro from '../Intro';
+import HowtoUse from '../HowtoUse';
 
 const Algebra = () => {
   return (
     <section className="section-container">
-      <h1>Álgebra - Simplifique Seus Cálculos</h1>
-      <p>
-        Bem-vindo à seção de Álgebra! Aqui, você pode realizar cálculos rápidos
-        e precisos com as fórmulas mais comuns usadas no dia a dia. Escolha a
-        fórmula desejada, insira os valores necessários e obtenha os resultados
-        em segundos!
-      </p>
-      <h2>Fórmulas Disponíveis</h2>
-      <span className="separator-horizontal"></span>
+      <Intro title={'Álgebra - Simplifique Seus Cálculos'} text={'Bem-vindo à seção de Álgebra! Aqui, você pode realizar cálculos rápidose precisos com as fórmulas mais comuns usadas no dia a dia. Escolha afórmula desejada, insira os valores necessários e obtenha os resultados em segundos!'}/>
       <FormulaContainer
         title={'Equação Linear (Forma Geral)'}
         example={'y = mx + b'}
@@ -24,7 +18,6 @@ const Algebra = () => {
           'Resultado, ou seja, o valor de y.',
         ]}
       />
-
       <FormulaContainer
         title={'Equação de 2° grau (Fórmula de Bhaskara)'}
         example={'ax² + bx + c = 0'}
@@ -37,7 +30,6 @@ const Algebra = () => {
           'Segunda raiz da equação.',
         ]}
       />
-
       <FormulaContainer
         title={'Propriedade do Logaritmo Simples (Base 10 e Base e)'}
         example={'log(x) = log(x) / log(b)'}
@@ -58,15 +50,7 @@ const Algebra = () => {
           'A base é um número irracional aproximadamente igual a 2,718.',
         ]}
       />
-
-      <h2>Como Funciona?</h2>
-      <span className="separator-horizontal"></span>
-      <ul>
-        <li>Escolha uma fórmula na lista abaixo.</li>
-        <li>Insira os valores necessários.</li>
-        <li>Espere o resultado.</li>
-      </ul>
-      <p>Com esta ferramenta, a álgebra nunca foi tão simples e prática!</p>
+      <HowtoUse />
     </section>
   );
 };
