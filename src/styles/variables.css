@@ -51,7 +51,7 @@ header {
   color: var(--white);
 }
 
-ul strong{
+ul strong {
   margin-right: 0.5rem;
 }
 
@@ -63,8 +63,7 @@ svg {
   padding-block: 80px;
   padding-left: 120px;
   max-height: calc(100dvh - 80px - 105px);
-  display: flex;
-  flex-direction: column;
+  animation: animeDown 300ms linear forwards;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -130,4 +129,19 @@ svg {
   background-color: var(--brown);
   opacity: 0.2;
   margin-inline: 2rem;
+}
+
+.animeDown {
+  animation: animeDown 300ms linear forwards;
+}
+
+@keyframes animeDown {
+  from {
+    transform: translateX(-3rem);
+    opacity: 0.5;
+  }
+  to {
+    transform: initial;
+    opacity: 1;
+  }
 }

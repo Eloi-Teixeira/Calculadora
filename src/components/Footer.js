@@ -7,29 +7,37 @@ import { ReactComponent as LinkedinSvg } from '../assets/icons/linkedin.svg';
 const Footer = () => {
   return (
     <footer className="footer-container">
-        <NavLink to="/" className="logo-container">
-          <div className="logo-content">
-            <img src={Logo} alt="Logo da Calculadora Completa" width='54px' height='51px' />
-          </div>
-        </NavLink>
+      <NavLink to="/" className="logo-content">
+        <img
+          src={Logo}
+          alt="Logo da Calculadora Completa"
+          width="54px"
+          height="51px"
+        />
+      </NavLink>
       <div className="footer-text">
         <p>
           Precisa de ajuda? <Link to="contact">Entre em contato.</Link>
         </p>
         <p>
           <Link to="privacity-policy">Política de Privacidade</Link>
-          <span className="separator-vertical
-          "></span>
+          <span
+            className="separator-vertical
+          "
+          ></span>
           <Link to="privacity-policy">Termos de Uso</Link>
         </p>
         <p>© 2025 Calculadora Completa. Todos os direitos reservados.</p>
       </div>
       <div className="social-media">
-        <a href='https://github.com/Eloi-Teixeira/Calculadora' target='_blanck'>
+        <a href="https://github.com/Eloi-Teixeira/Calculadora" target="_blanck">
           <GithubSvg />
           <p>GitHub</p>
         </a>
-        <a href='https://www.linkedin.com/in/el%C3%B3i-teixeira-8a613930a/' target='_blanck'>
+        <a
+          href="https://www.linkedin.com/in/el%C3%B3i-teixeira-8a613930a/"
+          target="_blanck"
+        >
           <LinkedinSvg />
           <p>Linkedin</p>
         </a>

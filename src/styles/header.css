@@ -117,6 +117,7 @@
   border-radius: 100%;
   width: 75px;
   height: 75px;
+  transition: .3s;
 }
 
 .btn-theme {
