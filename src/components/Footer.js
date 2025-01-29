@@ -16,16 +16,9 @@ const Footer = () => {
         />
       </NavLink>
       <div className="footer-text">
+        <Link to="privacity-policy">Política de Privacidade</Link>
         <p>
           Precisa de ajuda? <Link to="contact">Entre em contato.</Link>
-        </p>
-        <p>
-          <Link to="privacity-policy">Política de Privacidade</Link>
-          <span
-            className="separator-vertical
-          "
-          ></span>
-          <Link to="privacity-policy">Termos de Uso</Link>
         </p>
         <p>© 2025 Calculadora Completa. Todos os direitos reservados.</p>
       </div>

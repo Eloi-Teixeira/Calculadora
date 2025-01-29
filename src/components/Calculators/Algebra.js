@@ -2,6 +2,7 @@ import React from 'react';
 import FormulaContainer from '../Formula/FormulaContainer';
 import Intro from '../Intro';
 import HowtoUse from '../HowtoUse';
+import FormulaInfo from '../Formula/FormulaInfo';
 
 const Algebra = () => {
   return (
@@ -18,17 +19,17 @@ const Algebra = () => {
           'Resultado, ou seja, o valor de y.',
         ]}
       />
+
       <FormulaContainer
         title={'Equação de 2° grau (Fórmula de Bhaskara)'}
         example={'ax² + bx + c = 0'}
-        values={['a', 'b', 'c', 'x1', 'x2']}
+        values={['a', 'b', 'c']}
         info={[
           'Coeficientes da equação quadrática.',
           'Coeficientes da equação quadrática.',
           'Coeficientes da equação quadrática.',
-          'Primeira raiz da equação.',
-          'Segunda raiz da equação.',
         ]}
+        results={['x1', 'x2']}
       />
       <FormulaContainer
         title={'Propriedade do Logaritmo Simples (Base 10 e Base e)'}

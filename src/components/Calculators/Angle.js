@@ -1,6 +1,7 @@
 import React from 'react';
 import Intro from '../Intro';
 import HowtoUse from '../HowtoUse';
+import FormulaContainer from '../Formula/FormulaContainer';
 
 const Angle = () => {
   return (
@@ -8,6 +9,57 @@ const Angle = () => {
       <Intro
         title="Ângulos - Descubra Medidas e Relações"
         text="A seção de ângulos é projetada para ajudá-lo a calcular medidas angulares e explorar suas relações em diferentes contextos, como triângulos, círculos e trigonometria."
+      />
+      <FormulaContainer
+        title={'Conversão de Graus para Radianos'}
+        example={'Radianos = Graus * π / 180'}
+        values={['Graus', 'Radianos']}
+        info={[
+          'Medida em graus que você deseja converter.',
+          'A medida em radianos.',
+        ]}
+      />
+
+      <FormulaContainer
+        title={'Conversão de Radianos para Graus'}
+        example={'Graus = Radianos * 180 / π'}
+        values={['Radianos', 'Graus']}
+        info={[
+          'Medida em radianos que você deseja converter.',
+          'A medida em graus.',
+        ]}
+      />
+
+      <FormulaContainer
+        title={'Ângulo Interno de um Polígono Regular'}
+        example={'Ângulo Interno = ((n - 2) * 180) / n'}
+        values={['n', 'Ângulo Interno']}
+        info={[
+          'Número de lados do polígono.',
+          'Medida de um ângulo interno.',
+        ]}
+      />
+
+      <FormulaContainer
+        title={'Soma dos Ângulos Internos de um Polígono'}
+        example={'Soma dos Ângulos Internos = (n - 2) * 180'}
+        values={['n', 'Ângulo Interno']}
+        info={[
+          'Número de lados do polígono.',
+          'Soma total dos ângulos internos.',
+        ]}
+      />
+
+
+      <FormulaContainer
+        title={'Ângulo Central no Círculo'}
+        example={'Ângulo Central = Arco / Raio'}
+        values={['Arco', 'Raio', 'Ângulo Central']}
+        info={[
+          'Arco: Comprimento do arco da circunferência.',
+          'Raio: Raio do círculo.',
+          'Resultado: Medida do ângulo central em radianos.',
+        ]}
       />
       <HowtoUse />
     </section>

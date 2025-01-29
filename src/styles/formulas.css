@@ -54,6 +54,7 @@
   font-weight:  bold;
 }
 
+.formula-container label,
 .formula-container ul li strong{
   font-family: 'Source Code Pro', monospace;
 }

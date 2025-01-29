@@ -1,30 +1,81 @@
 import React from 'react';
 
-const FormulaResponse = ({example, inputValues, inputIDs}) => {
+const FormulaResponse = ({
+  example,
+  inputIDs = [],
+  inputValues = [],
+  results,
+}) => {
+  const [value, setValue] = React.useState('');
+  const [error, setError] = React.useState(false);
   const numberExamples = inputValues.length - 1;
-  
+  const isValid = inputIDs?.length === inputValues?.length;
+
+  const valideInput = (e) => {
+    const sanitizedInput = e.target.value.replace(/[^0-9.]/g, '');
+    e.target.value = sanitizedInput;
+    setValue(Number(sanitizedInput));
+  };
+
   return (
     <div className="formula-response">
       <p className="example">{example}</p>
-      <h4>Preencha {numberExamples} {numberExamples <= 1 ? 'valor' : 'valores'}</h4>
+      <h4>
+        Preencha {numberExamples} {numberExamples <= 1 ? 'valor' : 'valores'}
+      </h4>
       <ul>
         {inputValues.map((input, index) => (
           <li key={input + index}>
-            <strong>{input}: </strong>
-            <input type="number" name="" id={inputIDs &&  inputIDs.length === inputValues.lenght && `input-${inputIDs[index]}`} className="input-value" />
+            <label htmlFor={`input-${inputIDs[index]}`}>{input}: </label>
+            <input
+              type="text"
+              name={`input-${inputIDs[index]}`}
+              id={isValid ? `input-${inputIDs[index]}` : ``}
+              className="input-value"
+              aria-invalid={!isValid}
+              onChange={valideInput}
+            />
           </li>
         ))}
+        {error && (
+          <span className="error">
+            Por favor, preencha somente os campos necessários.
+          </span>
+        )}
       </ul>
       <h4>Respostas: </h4>
       <ul>
-        {inputValues.map((input, index) => (
-          <li key={input + index}>
-            <strong>{input}: </strong>
-            <span className="result-value" id={`result-${inputIDs && inputIDs.length === inputValues.lenght && inputIDs[index]}`}>
-              0
-            </span>
-          </li>
-        ))}
+        {!results
+          ? inputValues.map((input, index) => (
+              <li key={input + index}>
+                <strong>{input}: </strong>
+                <span
+                  className="result-value"
+                  id={`result-${
+                    inputIDs &&
+                    inputIDs.length === inputValues.lenght &&
+                    inputIDs[index]
+                  }`}
+                >
+                  0
+                </span>
+              </li>
+            ))
+          : results.map((result, index) => (
+              <li key={result + index}>
+                <strong>{result}: </strong>
+                <span
+                  className="result-value"
+                  id={`result-${
+                    inputIDs &&
+                    inputIDs.length === inputValues.lenght &&
+                    inputIDs[index]
+                  }`}
+                >
+                  0
+                </span>
+              </li>
+            ))}
       </ul>
     </div>
   );

@@ -1,0 +1,26 @@
+.page-privacity-policy .separator-horizontal{
+  transform: initial;
+  margin-block: 2rem;
+  width: calc(100% - 120px);
+}
+
+.page-privacity-policy strong {
+  margin-right: 0;
+}
+
+.page-privacity-policy li,
+.page-privacity-policy p {
+  font-size: 1rem;
+  max-width: 900px;
+}
+
+.page-privacity-policy h2 {
+  font-size: 1.5rem;
+}
+
+.page-privacity-policy a::after {
+  background-color: var(--golden);
+  height: 2px;
+  bottom: -2px;
+}
+

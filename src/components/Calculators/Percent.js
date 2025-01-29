@@ -5,7 +5,7 @@ import HowtoUse from '../HowtoUse';
 
 const Percent = () => {
   return (
-    <section className="section-container animeDown">
+    <section className="section-container">
       <Intro title='Porcentagem - Calcule Rápido e Fácil' text='A seção de porcentagem permite calcular rapidamente aumentos, descontos, lucros, e outros valores baseados em porcentagens. Simples de usar e essencial para diversas situações no dia a dia, como compras, finanças e análise de dados.' />
       <FormulaContainer
         title={'Cálculo de Percentual de um Valor'}
@@ -27,6 +27,7 @@ const Percent = () => {
           'Percentual de aumento (+) ou desconto (-).',
           'Valor final após o aumento ou desconto.',
         ]}
+        inputIDs={['ACVAD-valor-final', 'ACVAD-valor-desconto', 'ACVAD-' ]}
       />
 
       <FormulaContainer

@@ -14,14 +14,6 @@
   grid-template-rows: 80px 1fr auto;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-  max-width: 1440px;
-  display: flex;
-  align-items: center;
-}
-
 header .container {
   padding: 15px 36px 15px 5px;
   gap: 80px;
@@ -63,7 +55,7 @@ svg {
   padding-block: 80px;
   padding-left: 120px;
   max-height: calc(100dvh - 80px - 105px);
-  animation: animeDown 300ms linear forwards;
+  animation: fade-in 500ms linear forwards;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -76,6 +68,20 @@ svg {
 .section-container h1 {
   font-size: 3rem;
   margin-bottom: 2rem;
+}
+
+.section-container h2 {
+  font-size: 2rem;
+  margin-block: 1.5rem;
+}
+
+.section-container h3 {
+  font-size: 1.6rem;
+  margin-block: 1.5rem;
+}
+
+.section-container h4 {
+  font-size: 1.25rem;
 }
 
 .section-container ul {
@@ -99,18 +105,9 @@ svg {
   margin-right: 1rem;
 }
 
-.section-container h2 {
-  font-size: 2rem;
-  margin-block: 1.5rem;
-}
-
-.section-container h3 {
-  font-size: 1.6rem;
-  margin-block: 1.5rem;
-}
-
-.section-container h4 {
-  font-size: 1.25rem;
+.section-container label {
+  font-weight: bold;
+  margin-right: 0.5rem;
 }
 
 .section-container .separator-horizontal {
@@ -131,17 +128,21 @@ svg {
   margin-inline: 2rem;
 }
 
-.animeDown {
-  animation: animeDown 300ms linear forwards;
+.error {
+  color: #ff0000;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }
 
-@keyframes animeDown {
+/*** -------------------------------------------------------------------------------------
+  - Animations
+------------------------------------------------------------------------------------ ***/
+
+@keyframes fade-in {
   from {
-    transform: translateX(-3rem);
     opacity: 0.5;
   }
   to {
-    transform: initial;
     opacity: 1;
   }
 }
