@@ -1,16 +1,23 @@
 import React from 'react';
+import useAlgebraFunctions from '../../math-functions/AlgebraFunctions';
+
 
 const FormulaResponse = ({
   example,
   inputIDs = [],
   inputValues = [],
   results,
+  type,
+  numberExamples,
 }) => {
   const [value, setValue] = React.useState({});
   const [isLoading, setisLoading] = React.useState(0);
   const [error, setError] = React.useState(false);
-  const numberExamples = inputValues.length - 1;
+
+  numberExamples = numberExamples ? numberExamples : inputValues.length - 1;
   const isValid = inputIDs?.length === inputValues?.length;
+
+  const { manageEquations } = useAlgebraFunctions();
 
   const valideInput = (e) => {
     const sanitizedInput = e.target.value.replace(/[^0-9.]/g, '');
@@ -30,10 +37,25 @@ const FormulaResponse = ({
     });
   };
 
+  const showResults = (answers) => {
+    setisLoading(false);
+    setError(false);
+
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setisLoading(true);
+    if (Object.values(value).length != numberExamples) {
+      setisLoading(false);
+      setError(true);
+    } else {
+      const results = manageEquations(type, value);
+      showResults(results);
+    }
   };
+
+  console.log(value);
 
   return (
     <form className="formula-response" onSubmit={handleSubmit}>
@@ -52,15 +74,11 @@ const FormulaResponse = ({
               className="input-value"
               aria-invalid={!isValid}
               onChange={valideInput}
+              autoComplete="off"
             />
           </li>
         ))}
       </ul>
-      {error && (
-        <span className="error">
-          Por favor, preencha somente os campos necessários.
-        </span>
-      )}
       <h4>Respostas: </h4>
       <ul>
         {!results
@@ -69,11 +87,7 @@ const FormulaResponse = ({
                 <strong>{input}: </strong>
                 <span
                   className="result-value"
-                  id={`result-${
-                    inputIDs &&
-                    inputIDs.length === inputValues.lenght &&
-                    inputIDs[index]
-                  }`}
+                  id={isValid ? `result-${inputIDs[index]}` : ``}
                 >
                   0
                 </span>
@@ -84,11 +98,7 @@ const FormulaResponse = ({
                 <strong>{result}: </strong>
                 <span
                   className="result-value"
-                  id={`result-${
-                    inputIDs &&
-                    inputIDs.length === inputValues.lenght &&
-                    inputIDs[index]
-                  }`}
+                  id={isValid ? `result-${inputIDs[index]}` : ``}
                 >
                   0
                 </span>
@@ -106,6 +116,11 @@ const FormulaResponse = ({
         </button>
       ) : (
         <button className="button-calculate">Calcular</button>
+      )}
+      {error && (
+        <span className="error">
+          Por favor, preencha somente os campos necessários.
+        </span>
       )}
     </form>
   );

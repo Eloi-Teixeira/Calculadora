@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <header>
-      <div>
+      <div className='header-desktop'>
         <NavLink to="/" className="logo-container">
           <div className="logo-content">
             <img src={Logo} alt="Logo da Calculadora Completa" width='54px' height='51px' />

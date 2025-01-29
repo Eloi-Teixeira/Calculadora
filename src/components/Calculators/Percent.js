@@ -6,7 +6,10 @@ import HowtoUse from '../HowtoUse';
 const Percent = () => {
   return (
     <section className="section-container">
-      <Intro title='Porcentagem - Calcule Rápido e Fácil' text='A seção de porcentagem permite calcular rapidamente aumentos, descontos, lucros, e outros valores baseados em porcentagens. Simples de usar e essencial para diversas situações no dia a dia, como compras, finanças e análise de dados.' />
+      <Intro
+        title="Porcentagem - Calcule Rápido e Fácil"
+        text="A seção de porcentagem permite calcular rapidamente aumentos, descontos, lucros, e outros valores baseados em porcentagens. Simples de usar e essencial para diversas situações no dia a dia, como compras, finanças e análise de dados."
+      />
       <FormulaContainer
         title={'Cálculo de Percentual de um Valor'}
         example={'P = V * P% / 100'}
@@ -15,6 +18,11 @@ const Percent = () => {
           'Valor inicial.',
           'Percentual a ser calculado.',
           'Resultado, ou seja, o valor percentual de V.',
+        ]}
+        inputIDs={[
+          'PercentualValor-valor',
+          'PercentualValor-percentual',
+          'PercentualValor-resultado',
         ]}
       />
 
@@ -27,7 +35,11 @@ const Percent = () => {
           'Percentual de aumento (+) ou desconto (-).',
           'Valor final após o aumento ou desconto.',
         ]}
-        inputIDs={['ACVAD-valor-final', 'ACVAD-valor-desconto', 'ACVAD-' ]}
+        inputIDs={[
+          'ValorAumentoDesconto-valor',
+          'ValorAumentoDesconto-percentual',
+          'ValorAumentoDesconto-resultado',
+        ]}
       />
 
       <FormulaContainer
@@ -39,7 +51,13 @@ const Percent = () => {
           'Valor total de referência.',
           'Percentual da parte em relação ao total.',
         ]}
+        inputIDs={[
+          'PercentualRelacao-valorParte',
+          'PercentualRelacao-valorTotal',
+          'PercentualRelacao-percentual',
+        ]}
       />
+
       <HowtoUse />
     </section>
   );

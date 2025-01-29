@@ -6,7 +6,6 @@ import Home from './pages/PageHome';
 import PageCalculator from './pages/PageCalculator';
 import Contato from './pages/PageContato';
 import Aside from './components/Aside';
-import Algebra from './components/Calculators/Algebra';
 import PagePrivacityPolicy from './pages/PagePrivacityPolicy';
 
 const App = () => {
