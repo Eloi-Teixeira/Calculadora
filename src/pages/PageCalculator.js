@@ -5,6 +5,7 @@ import Percent from '../components/Calculators/Percent'
 import Rooting from '../components/Calculators/Rooting'
 import Geometry from '../components/Calculators/Geometry'
 import Angle from '../components/Calculators/Angle'
+import Strength from '../components/Calculators/Strength'
 
 const PageCalculator = () => {
   return (
@@ -15,6 +16,7 @@ const PageCalculator = () => {
       <Route path="rooting" element={<Rooting />} />
       <Route path="geometry" element={<Geometry />} />
       <Route path="angle" element={<Angle />} />
+      <Route path="strength" element={<Strength />} />
       </Routes>
     </>
   )

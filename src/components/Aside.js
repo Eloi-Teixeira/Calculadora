@@ -52,9 +52,9 @@ const Aside = () => {
           <AngleSvg />
           <span className={`text-option`}>Angulo</span>
         </NavLink>
-        <NavLink to="calc/weight">
+        <NavLink to="calc/strength">
           <WeightSvg />
-          <span className={`text-option`}>Peso</span>
+          <span className={`text-option`}>Força</span>
         </NavLink>
         <button onClick={handleActiveAsideMenu}>
           <BoxArrowSvg className={`${expanded ? '' : 'active'}`} />

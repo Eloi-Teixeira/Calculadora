@@ -74,7 +74,7 @@ const Geometry = () => {
         example={'Volume = a³'}
         values={['a', 'Volume']}
         info={[' Medida da aresta do cubo.', 'O volume do cubo.']}
-        inputIDs={['VC-aresta', 'VC-resultado']}
+        inputIDs={['VC-aresta', 'VC-volume']}
       />
       <FormulaContainer
         title={'Volume do Cilindro'}
@@ -85,7 +85,7 @@ const Geometry = () => {
           'Altura do cilindro.',
           'O volume do cilindro.',
         ]}
-        inputIDs={['VC-raio', 'VC-altura', 'VC-volume']}
+        inputIDs={['VolumeCilindro-raio', 'VolumeCilindro-altura', 'VolumeCilindro-volume']}
       />
       <FormulaContainer
         title={'Área Total do Cilindro'}

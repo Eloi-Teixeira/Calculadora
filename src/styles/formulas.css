@@ -8,15 +8,16 @@
   text-align: center;
   font-family: 'Source Code Pro', monospace;
   margin-bottom: 1.25rem;
+  transform: translateX(-2rem);
 }
 
 .formula-response {
   display: grid;
   grid-template-areas:
     'example example'
-    'titleForm  titleResponse'
-    'formula1  formula2'
-    'button  button';
+    'titleForm titleResponse'
+    'formula1 formula2'
+    'button button';
   gap: 10px;
   max-width: 500px;
 }
@@ -47,14 +48,75 @@
 }
 
 .button-calculate {
-  padding: 1rem 1.5rem;
+  padding: 1rem 3rem;
   background-color: var(--golden);
   color: var(--brown);
   border-radius: 5px;
+  font-size: 1.2rem;
   font-weight:  bold;
+  max-width: max-content;
+  place-self: center;
+  margin-bottom: 2rem;
+  transform: translateX(-2rem);
+  display: flex;
+  align-items: end;
+  transition: .3s;
+}
+
+.button-calculate:hover {
+  box-shadow: 0 0 10px var(--golden);
+}
+
+.button-calculate:hover:disabled {
+  box-shadow: 0 0 0 var(--golden);
+}
+
+.button-calculate:disabled {
+  background-color: gray;
+  color: white;
 }
 
 .formula-container label,
 .formula-container ul li strong{
   font-family: 'Source Code Pro', monospace;
+}
+
+.error {
+  color: #ff0000;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.dots {
+  width: 1em;
+  display: inherit;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(-7px) translateX(4px);
+}
+
+.dots div {
+  width: 0.2em;
+  height: 0.2em;
+  border-radius: 50%;
+  background-color: white;
+  animation: fade 0.8s ease-in-out alternate infinite;
+}
+
+.dots div:nth-of-type(1) {
+  animation-delay: -0.4s;
+}
+
+.dots div:nth-of-type(2) {
+  animation-delay: -0.2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

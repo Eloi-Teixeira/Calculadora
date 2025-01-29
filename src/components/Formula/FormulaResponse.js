@@ -6,7 +6,8 @@ const FormulaResponse = ({
   inputValues = [],
   results,
 }) => {
-  const [value, setValue] = React.useState('');
+  const [value, setValue] = React.useState({});
+  const [isLoading, setisLoading] = React.useState(0);
   const [error, setError] = React.useState(false);
   const numberExamples = inputValues.length - 1;
   const isValid = inputIDs?.length === inputValues?.length;
@@ -14,11 +15,28 @@ const FormulaResponse = ({
   const valideInput = (e) => {
     const sanitizedInput = e.target.value.replace(/[^0-9.]/g, '');
     e.target.value = sanitizedInput;
-    setValue(Number(sanitizedInput));
+
+    setValue((prev) => {
+      if (sanitizedInput === '') {
+        delete prev[e.target.name];
+        return {
+          ...prev,
+        };
+      }
+      return {
+        ...prev,
+        [e.target.name]: Number(sanitizedInput),
+      };
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setisLoading(true);
   };
 
   return (
-    <div className="formula-response">
+    <form className="formula-response" onSubmit={handleSubmit}>
       <p className="example">{example}</p>
       <h4>
         Preencha {numberExamples} {numberExamples <= 1 ? 'valor' : 'valores'}
@@ -37,12 +55,12 @@ const FormulaResponse = ({
             />
           </li>
         ))}
-        {error && (
-          <span className="error">
-            Por favor, preencha somente os campos necessários.
-          </span>
-        )}
       </ul>
+      {error && (
+        <span className="error">
+          Por favor, preencha somente os campos necessários.
+        </span>
+      )}
       <h4>Respostas: </h4>
       <ul>
         {!results
@@ -77,7 +95,19 @@ const FormulaResponse = ({
               </li>
             ))}
       </ul>
-    </div>
+      {isLoading ? (
+        <button className="button-calculate" disabled>
+          Carregando
+          <div className="dots">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </button>
+      ) : (
+        <button className="button-calculate">Calcular</button>
+      )}
+    </form>
   );
 };
 
