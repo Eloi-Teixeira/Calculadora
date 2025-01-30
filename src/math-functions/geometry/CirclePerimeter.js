@@ -5,15 +5,15 @@ const CirclePerimeter = (values) => {
   } = values;
 
   if (Perimeter === undefined) {
-    return {
+    return [{
       result: Number((2 * Math.PI * r).toFixed(2)),
       resultName: 'Perímetro',
-    };
+    }];
   } else if (r === undefined) {
-    return {
+    return [{
       result: Number((Perimeter / (2 * Math.PI)).toFixed(2)),
       resultName: 'Raio',
-    };
+    }];
   } else {
     console.error('Invalid input');
   }

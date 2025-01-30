@@ -6,20 +6,20 @@ const AreaTriangle = (values) => {
   } = values;
 
   if (Area === undefined) {
-    return {
+    return [{
       result: Number((base * h / 2).toFixed(2)),
       resultName: 'Área',
-    };
+    }];
   } else if (base === undefined) {
-    return {
+    return [{
       result: Number((Area * 2 / h).toFixed(2)),
       resultName: 'Base',
-    };
+    }];
   } else if (h === undefined) {
-    return {
+    return [{
       result: Number((Area * 2 / base).toFixed(2)),
       resultName: 'Altura',
-    };
+    }];
   } else {
     console.error('Invalid input');
   }

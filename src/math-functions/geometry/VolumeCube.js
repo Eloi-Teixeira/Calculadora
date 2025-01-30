@@ -5,15 +5,15 @@ const VolumeCube = (values) => {
   } = values;
 
   if (Volume === undefined) {
-    return {
+    return [{
       result: Number((l ** 3).toFixed(2)),
       resultName: 'Volume',
-    };
+    }];
   } else if (l === undefined) {
-    return {
+    return [{
       result: Number((Volume ** (1 / 3)).toFixed(2)),
       resultName: 'Aresta',
-    };
+    }];
   } else {
     console.error('Invalid input');
   }
