@@ -7,7 +7,6 @@ const linearEquationM = (x, y, b) => {
 const linearEquationX = (y, m, b) => {
   return (y - b) / m;
 };
-
 const linearEquationB = (x, m, y) => {
   return y - m * x;
 };

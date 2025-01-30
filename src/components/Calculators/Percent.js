@@ -24,22 +24,7 @@ const Percent = () => {
           'PercentualValor-percentual',
           'PercentualValor-resultado',
         ]}
-      />
-
-      <FormulaContainer
-        title={'Cálculo de Valor após Aumento ou Desconto'}
-        example={'Vfinal = V ± (V * P% / 100)'}
-        values={['V', 'P%', 'Vfinal']}
-        info={[
-          'Valor inicial.',
-          'Percentual de aumento (+) ou desconto (-).',
-          'Valor final após o aumento ou desconto.',
-        ]}
-        inputIDs={[
-          'ValorAumentoDesconto-valor',
-          'ValorAumentoDesconto-percentual',
-          'ValorAumentoDesconto-resultado',
-        ]}
+        type='percentageValue'
       />
 
       <FormulaContainer
@@ -56,6 +41,7 @@ const Percent = () => {
           'PercentualRelacao-valorTotal',
           'PercentualRelacao-percentual',
         ]}
+        type={'relativePercentage'}
       />
 
       <HowtoUse />

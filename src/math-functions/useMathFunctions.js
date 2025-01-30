@@ -15,6 +15,8 @@ import PerimeterTriangle from './geometry/PerimeterTriangle.js';
 import VolumeCube from './geometry/VolumeCube.js';
 import CylinderVolume from './geometry/CylinderVolume.js';
 import TotalCylinderArea from './geometry/TotalCylinderArea.js';
+import PercentageValue from './percent/PercentageValue.js';
+import RelativePercentage from './percent/RelativePercentage.js';
 
 const useMathFunctions = (type, values) => {
   let result;
@@ -70,6 +72,12 @@ const useMathFunctions = (type, values) => {
       break;
     case 'totalCylinderArea':
       result = TotalCylinderArea(values);
+      break;
+    case 'percentageValue':
+      result = PercentageValue(values);
+      break;
+    case 'relativePercentage':
+      result = RelativePercentage(values);
       break;
     default:
       console.error('Invalid equation type');
