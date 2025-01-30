@@ -1,6 +1,5 @@
 import React from 'react';
-import useAlgebraFunctions from '../../math-functions/AlgebraFunctions';
-
+import useMathFunctions from '../../math-functions/useMathFunctions';
 
 const FormulaResponse = ({
   example,
@@ -16,8 +15,6 @@ const FormulaResponse = ({
 
   numberExamples = numberExamples ? numberExamples : inputValues.length - 1;
   const isValid = inputIDs?.length === inputValues?.length;
-
-  const { manageEquations } = useAlgebraFunctions();
 
   const valideInput = (e) => {
     const sanitizedInput = e.target.value.replace(/[^0-9.]/g, '');
@@ -40,7 +37,7 @@ const FormulaResponse = ({
   const showResults = (answers) => {
     setisLoading(false);
     setError(false);
-
+    console.log(answers);
   };
 
   const handleSubmit = (e) => {
@@ -50,7 +47,7 @@ const FormulaResponse = ({
       setisLoading(false);
       setError(true);
     } else {
-      const results = manageEquations(type, value);
+      const results = useMathFunctions(type, value);
       showResults(results);
     }
   };

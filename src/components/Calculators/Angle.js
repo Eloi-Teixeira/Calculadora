@@ -23,20 +23,7 @@ const Angle = () => {
           'Medida em graus que você deseja converter.',
           'A medida em radianos.',
         ]}
-      />
-
-      <FormulaContainer
-        title={'Conversão de Radianos para Graus'}
-        example={'Graus = Radianos * 180 / π'}
-        values={['Radianos', 'Graus']}
-        inputIDs={[
-          'ConversaoRadianosGraus-Radianos',
-          'ConversaoRadianosGraus-Graus',
-        ]}
-        info={[
-          'Medida em radianos que você deseja converter.',
-          'A medida em graus.',
-        ]}
+        type={'conversionDegreesRadians'}
       />
 
       <FormulaContainer
@@ -48,7 +35,8 @@ const Angle = () => {
           'AnguloInternoPoligono-AnguloInterno',
         ]}
         info={['Número de lados do polígono.', 'Medida de um ângulo interno.']}
-      />
+        type={'internalAnglePolygon'}
+        />
 
       <FormulaContainer
         title={'Soma dos Ângulos Internos de um Polígono'}
@@ -62,6 +50,7 @@ const Angle = () => {
           'Número de lados do polígono.',
           'Soma total dos ângulos internos.',
         ]}
+        type={'sumInternalAnglePolygon'}
       />
 
       <FormulaContainer
@@ -78,6 +67,7 @@ const Angle = () => {
           'Raio: Raio do círculo.',
           'Resultado: Medida do ângulo central em radianos.',
         ]}
+        type={'centralAngleCircle'}
       />
       <HowtoUse />
     </section>
