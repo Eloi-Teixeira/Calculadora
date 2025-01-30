@@ -10,8 +10,8 @@ const BhaskaraEquation = (values) => {
   const x2 = parseFloat(((-b - Math.sqrt(delta)) / (2 * a)).toFixed(2));
 
   return [
-    { letter: 'x1', result: x1 },
-    { letter: 'x2', result: x2 },
+    { resultName: 'x1', result: x1 },
+    { resultName: 'x2', result: x2 },
   ];
 };
 

@@ -4,11 +4,11 @@ const sumInternalAnglePolygon = (values) => {
     'input-SomaAngulosInternosPoligono-n': n,
   } = values;
   if (n) {
-    const result = (n - 2) * 180 ;
-    return [{ letter: 'Ângulo Interno', result }];
+    const result = (n - 2) * 180;
+    return [{ resultName: 'Ângulo Interno', result }];
   } else if (Sum) {
     const result = Sum / 180 + 2;
-    return [{ letter: 'n', result }];
+    return [{ resultName: 'n', result }];
   } else {
     console.error('Invalid input');
     return null;

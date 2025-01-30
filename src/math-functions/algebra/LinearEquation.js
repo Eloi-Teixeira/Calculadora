@@ -21,31 +21,31 @@ const manageLinearEquation = (values) => {
   } = values;
 
   let result;
-  let letter;
+  let resultName;
 
   switch (true) {
     case x === undefined:
       result = linearEquationX(y, m, b);
-      letter = 'x';
+      resultName = 'x';
       break;
     case m === undefined:
       result = linearEquationM(x, y, b);
-      letter = 'm';
+      resultName = 'm';
       break;
     case b === undefined:
       result = linearEquationB(x, m, y);
-      letter = 'b';
+      resultName = 'b';
       break;
     case y === undefined:
       result = linearEquationY(x, m, b);
-      letter = 'y';
+      resultName = 'y';
       break;
     default:
       console.log('Invalid equation type');
   }
 
   result = Number(result.toFixed(2));
-  return [{ letter, result }];
+  return [{ resultName, result }];
 };
 
 export default manageLinearEquation;

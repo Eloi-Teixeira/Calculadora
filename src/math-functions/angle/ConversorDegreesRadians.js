@@ -8,10 +8,10 @@ const conversionDegreesRadians = (values) => {
 
   if (Graus) {
     const result = (Graus * Math.PI) / 180;
-    return [{ letter: 'Radianos', result }];
+    return [{ resultName: 'Radianos', result }];
   } else if (Radianos) {
     const result = (Radianos * 180) / Math.PI;
-    return [{ letter: 'Graus', result }];
+    return [{ resultName: 'Graus', result }];
   } else {
     console.error('Invalid input');
     return null;

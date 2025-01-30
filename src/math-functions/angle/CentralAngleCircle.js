@@ -6,13 +6,13 @@ const CentralAngleCircle = (values) => {
   } = values;
   if (centralAngle && arcLength) {
     const result = arcLength / centralAngle;
-    return [{ letter: 'Raio', result }];
+    return [{ resultName: 'Raio', result }];
   } else if (arcLength && radius) {
     const result = arcLength / radius;
-    return [{ letter: 'Ângulo Central', result }];
+    return [{ resultName: 'Ângulo Central', result }];
   } else if (radius && centralAngle) {
     const result = centralAngle * radius;
-    return [{ letter: 'Arco', result }];
+    return [{ resultName: 'Arco', result }];
   } else {
     console.error('Invalid input');
     return null;

@@ -20,7 +20,8 @@ const Geometry = () => {
           'A medida da área.',
         ]}
         inputIDs={['AR-base', 'AR-altura', 'AR-area']}
-      />
+        type="rectangleArea"
+        />
       <FormulaContainer
         title={'Perímetro do Retângulo'}
         example={'Perímetro = 2 * (b + h)'}
@@ -31,21 +32,24 @@ const Geometry = () => {
           'A medida do perímetro.',
         ]}
         inputIDs={['PR-base', 'PR-altura', 'PR-perimetro']}
-      />
+        type="perimeterRectangle"
+        />
       <FormulaContainer
         title={'Área do Círculo'}
         example={'Área = π * r²'}
         values={['r', 'Área']}
         info={['Raio do círculo.', 'A medida da área.']}
         inputIDs={['AC-raio', 'AC-area']}
-      />
+        type="circleArea"
+        />
       <FormulaContainer
         title={'Perímetro do Círculo'}
         example={'Perímetro = 2 * π * r'}
         values={['r', 'Perímetro']}
         info={['Raio do círculo.', 'A medida do perímetro.']}
         inputIDs={['PC-raio', 'PC-perimetro']}
-      />
+        type="circlePerimeter"
+        />
       <FormulaContainer
         title={'Área do Triângulo'}
         example={'Área = (b * h) / 2'}
@@ -56,7 +60,8 @@ const Geometry = () => {
           'A medida da área.',
         ]}
         inputIDs={['AT-base', 'AT-altura', 'AT-area']}
-      />
+        type="areaTriangle"
+        />
       <FormulaContainer
         title={'Perímetro do Triângulo'}
         example={'Perímetro = a + b + c'}
@@ -68,14 +73,16 @@ const Geometry = () => {
           'A medida do perímetro.',
         ]}
         inputIDs={['PT-lado1', 'PT-lado2', 'PT-lado3', 'PT-perimetro']}
-      />
+        type="perimeterTriangle"
+        />
       <FormulaContainer
         title={'Volume do Cubo'}
         example={'Volume = a³'}
         values={['a', 'Volume']}
         info={[' Medida da aresta do cubo.', 'O volume do cubo.']}
         inputIDs={['VC-aresta', 'VC-volume']}
-      />
+        type="volumeCube"
+        />
       <FormulaContainer
         title={'Volume do Cilindro'}
         example={'Volume = π * r² * h'}
@@ -86,7 +93,8 @@ const Geometry = () => {
           'O volume do cilindro.',
         ]}
         inputIDs={['VolumeCilindro-raio', 'VolumeCilindro-altura', 'VolumeCilindro-volume']}
-      />
+        type="cylinderVolume"
+        />
       <FormulaContainer
         title={'Área Total do Cilindro'}
         example={'Área = 2 * π * r * (r + h)'}
@@ -97,6 +105,7 @@ const Geometry = () => {
           'A área total do cilindro.',
         ]}
         inputIDs={['ATC-raio', 'ATC-altura', 'ATC-area']}
+        type="totalCylinderArea"
       />
       <HowtoUse />
     </section>

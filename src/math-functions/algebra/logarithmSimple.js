@@ -4,7 +4,7 @@ const logarithmSimple = (value) => {
 
   const result = Math.log(x) / Math.log(b);
 
-  return [{ letter: 'log(x)', result }];
+  return [{ resultName: 'log(x)', result }];
 };
 
 export default logarithmSimple;
