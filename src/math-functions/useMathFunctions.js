@@ -17,6 +17,9 @@ import CylinderVolume from './geometry/CylinderVolume.js';
 import TotalCylinderArea from './geometry/TotalCylinderArea.js';
 import PercentageValue from './percent/PercentageValue.js';
 import RelativePercentage from './percent/RelativePercentage.js';
+import SquareRoot from './rooting/SquareRoot.js';
+import CubicRoot from './rooting/CubicRoot.js';
+import RadicationWithIndex from './rooting/RadicationWithIndex.js';
 
 const useMathFunctions = (type, values) => {
   let result;
@@ -78,6 +81,15 @@ const useMathFunctions = (type, values) => {
       break;
     case 'relativePercentage':
       result = RelativePercentage(values);
+      break;
+    case 'SquareRoot':
+      result = SquareRoot(values);
+      break;
+    case 'cubicRoot':
+      result = CubicRoot(values);
+      break;
+    case 'radicationWithIndex':
+      result = RadicationWithIndex(values);
       break;
     default:
       console.error('Invalid equation type');

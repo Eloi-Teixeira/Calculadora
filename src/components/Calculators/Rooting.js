@@ -20,6 +20,7 @@ const Rooting = () => {
           'r é o resultado da raiz quadrada de x.',
         ]}
         inputIDs={['RaizQuadrada-radicando', 'RaizQuadrada-resultado']}
+        type={'SquareRoot'}
       />
 
       <FormulaContainer
@@ -31,7 +32,8 @@ const Rooting = () => {
           'r é o resultado da raiz cúbica de x.',
         ]}
         inputIDs={['RaizCubica-radicando', 'RaizCubica-resultado']}
-      />
+        type={'cubicRoot'}
+        />
 
       <FormulaContainer
         title={'Radiciação com Índice'}
@@ -47,6 +49,7 @@ const Rooting = () => {
           'RaizComIndice-radicando',
           'RaizComIndice-resultado',
         ]}
+        type={'radicationWithIndex'}
       />
 
       <HowtoUse />
