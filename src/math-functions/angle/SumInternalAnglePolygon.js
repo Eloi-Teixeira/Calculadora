@@ -1,4 +1,4 @@
-const sumInternalAnglePolygon = (values) => {
+const SumInternalAnglePolygon = (values) => {
   const {
     'input-SomaAngulosInternosPoligono-Soma': Sum,
     'input-SomaAngulosInternosPoligono-n': n,
@@ -15,4 +15,4 @@ const sumInternalAnglePolygon = (values) => {
   }
 };
 
-export default sumInternalAnglePolygon;
+export default SumInternalAnglePolygon;

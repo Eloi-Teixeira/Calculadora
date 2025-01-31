@@ -1,4 +1,4 @@
-const conversionDegreesRadians = (values) => {
+const ConversionDegreesRadians = (values) => {
   const {
     'input-ConversaoGrausRadianos-Graus': Graus,
     'input-ConversaoGrausRadianos-Radianos': Radianos,
@@ -18,4 +18,4 @@ const conversionDegreesRadians = (values) => {
   }
 };
 
-export default conversionDegreesRadians;
+export default ConversionDegreesRadians;

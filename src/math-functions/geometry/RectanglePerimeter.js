@@ -1,4 +1,4 @@
-const PerimeterRectangle = (values) => {
+const RectanglePerimeter = (values) => {
   const {
     'input-PR-altura': h,
     'input-PR-base': base,
@@ -31,4 +31,4 @@ const PerimeterRectangle = (values) => {
   }
 };
 
-export default PerimeterRectangle;
+export default RectanglePerimeter;

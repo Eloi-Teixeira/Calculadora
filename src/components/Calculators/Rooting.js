@@ -20,7 +20,7 @@ const Rooting = () => {
           'r é o resultado da raiz quadrada de x.',
         ]}
         inputIDs={['RaizQuadrada-radicando', 'RaizQuadrada-resultado']}
-        type={'SquareRoot'}
+        type={'squareRoot'}
       />
 
       <FormulaContainer

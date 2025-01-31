@@ -11,7 +11,7 @@ const linearEquationB = (x, m, y) => {
   return y - m * x;
 };
 
-const manageLinearEquation = (values) => {
+const ManageLinearEquation = (values) => {
   const {
     'input-EquacaoLinear-x': x,
     'input-EquacaoLinear-m': m,
@@ -47,4 +47,4 @@ const manageLinearEquation = (values) => {
   return [{ resultName, result }];
 };
 
-export default manageLinearEquation;
+export default ManageLinearEquation;

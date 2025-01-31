@@ -1,4 +1,4 @@
-const logarithmSimple = (value) => {
+const LogarithmSimple = (value) => {
   const { 'input-LogaritmoSimples-b': b, 'input-LogaritmoSimples-x': x } =
     value;
 
@@ -7,4 +7,4 @@ const logarithmSimple = (value) => {
   return [{ resultName: 'log(x)', result }];
 };
 
-export default logarithmSimple;
+export default LogarithmSimple;

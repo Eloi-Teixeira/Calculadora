@@ -1,13 +1,13 @@
-import manageLinearEquation from './algebra/LinearEquation.js';
-import bhaskaraEquation from './algebra/BhaskaraEquation.js';
-import logarithmSimple from './algebra/LogarithmSimple.js';
-import logarithmNatural from './algebra/LogarithmNatural.js';
-import conversionDegreesRadians from './angle/ConversorDegreesRadians.js';
-import internalAnglePolygon from './angle/InternalAnglePolygon.js';
-import sumInternalAnglePolygon from './angle/SumInternalAnglePolygon.js';
+import ManageLinearEquation from './algebra/LinearEquation.js';
+import BhaskaraEquation from './algebra/BhaskaraEquation.js';
+import LogarithmSimple from './algebra/LogarithmSimple.js';
+import LogarithmNatural from './algebra/LogarithmNatural.js';
+import ConversionDegreesRadians from './angle/ConversorDegreesRadians.js';
+import InternalAnglePolygon from './angle/InternalAnglePolygon.js';
+import SumInternalAnglePolygon from './angle/SumInternalAnglePolygon.js';
 import CentralAngleCircle from './angle/CentralAngleCircle.js';
 import RectangleArea from './geometry/RectangleArea.js';
-import PerimeterRectangle from './geometry/PerimeterRectangle.js';
+import RectanglePerimeter from './geometry/RectanglePerimeter.js';
 import CircleArea from './geometry/CircleArea.js';
 import CirclePerimeter from './geometry/CirclePerimeter.js';
 import AreaTriangle from './geometry/AreaTriangle.js';
@@ -23,102 +23,51 @@ import RadicationWithIndex from './rooting/RadicationWithIndex.js';
 import ForceCalculation from './strength/ForceCalculation.js';
 import AverageSpeed from './strength/AverageSpeed.js';
 import AverageAcceleration from './strength/AverageAcceleration.js';
-import UAM from './strength/UAM.js';
+import uMotion from './strength/UMotion.js';
 import AcceleratedPosition from './strength/AcceleratedPosition.js';
 import Weight from './strength/Weight.js';
 
-const useMathFunctions = (type, values) => {
-  let result;
-
-  switch (type) {
-    case 'linear':
-      result = manageLinearEquation(values);
-      break;
-    case 'bhaskara':
-      result = bhaskaraEquation(values);
-      break;
-    case 'logarithmSimple':
-      result = logarithmSimple(values);
-      break;
-    case 'logarithmNatural':
-      result = logarithmNatural(values);
-      break;
-    case 'conversionDegreesRadians':
-      result = conversionDegreesRadians(values);
-      break;
-    case 'internalAnglePolygon':
-      result = internalAnglePolygon(values);
-      break;
-    case 'sumInternalAnglePolygon':
-      result = sumInternalAnglePolygon(values);
-      break;
-    case 'centralAngleCircle':
-      result = CentralAngleCircle(values);
-      break;
-    case 'rectangleArea':
-      result = RectangleArea(values);
-      break;
-    case 'perimeterRectangle':
-      result = PerimeterRectangle(values);
-      break;
-    case 'circleArea':
-      result = CircleArea(values);
-      break;
-    case 'circlePerimeter':
-      result = CirclePerimeter(values);
-      break;
-    case 'areaTriangle':
-      result = AreaTriangle(values);
-      break;
-    case 'perimeterTriangle':
-      result = PerimeterTriangle(values);
-      break;
-    case 'volumeCube':
-      result = VolumeCube(values);
-      break;
-    case 'cylinderVolume':
-      result = CylinderVolume(values);
-      break;
-    case 'totalCylinderArea':
-      result = TotalCylinderArea(values);
-      break;
-    case 'percentageValue':
-      result = PercentageValue(values);
-      break;
-    case 'relativePercentage':
-      result = RelativePercentage(values);
-      break;
-    case 'SquareRoot':
-      result = SquareRoot(values);
-      break;
-    case 'cubicRoot':
-      result = CubicRoot(values);
-      break;
-    case 'radicationWithIndex':
-      result = RadicationWithIndex(values);
-      break;
-    case 'forceCalculation':
-      result = ForceCalculation(values);
-      break;
-    case 'averageSpeed':
-      result = AverageSpeed(values);
-      break;
-    case 'averageAcceleration':
-      result = AverageAcceleration(values);
-      break;
-    case 'uam':
-      result = UAM(values);
-      break;
-    case 'acceleratedPosition':
-      result = AcceleratedPosition(values);
-      break;
-    case 'weight':
-      result = Weight(values);
-      break;
-    default:
-      console.error('Invalid equation type');
-  }
-  return result;
+const mathFunctions = {
+  linear: ManageLinearEquation,
+  bhaskara: BhaskaraEquation,
+  logarithmSimple: LogarithmSimple,
+  logarithmNatural: LogarithmNatural,
+  conversionDegreesRadians: ConversionDegreesRadians,
+  internalAnglePolygon: InternalAnglePolygon,
+  sumInternalAnglePolygon: SumInternalAnglePolygon,
+  centralAngleCircle: CentralAngleCircle,
+  rectangleArea: RectangleArea,
+  perimeterRectangle: RectanglePerimeter,
+  circleArea: CircleArea,
+  circlePerimeter: CirclePerimeter,
+  areaTriangle: AreaTriangle,
+  perimeterTriangle: PerimeterTriangle,
+  volumeCube: VolumeCube,
+  cylinderVolume: CylinderVolume,
+  totalCylinderArea: TotalCylinderArea,
+  percentageValue: PercentageValue,
+  relativePercentage: RelativePercentage,
+  squareRoot: SquareRoot,
+  cubicRoot: CubicRoot,
+  radicationWithIndex: RadicationWithIndex,
+  forceCalculation: ForceCalculation,
+  averageSpeed: AverageSpeed,
+  averageAcceleration: AverageAcceleration,
+  uam: uMotion,
+  acceleratedPosition: AcceleratedPosition,
+  weight: Weight
 };
+
+const useMathFunctions = (type, values) => {
+  const func = mathFunctions[type];
+
+  if (!func) {
+    console.error('Invalid equation type');
+    return null;
+  }
+
+  return func(values);
+};
+
 
 export default useMathFunctions;

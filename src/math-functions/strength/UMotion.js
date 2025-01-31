@@ -1,4 +1,4 @@
-const UAM = (values) => {
+const uMotion = (values) => {
   const {
     'input-EquacaoVelocidadeMUV-v₀': v0,
     'input-EquacaoVelocidadeMUV-a': a,
@@ -19,4 +19,4 @@ const UAM = (values) => {
   }
 };
 
-export default UAM;
+export default uMotion;

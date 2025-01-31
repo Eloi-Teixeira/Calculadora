@@ -1,4 +1,4 @@
-const internalAnglePolygon = (values) => {
+const InternalAnglePolygon = (values) => {
   const {
     'input-AnguloInternoPoligono-AnguloInterno': internalAngle,
     'input-AnguloInternoPoligono-n': n,
@@ -17,4 +17,4 @@ const internalAnglePolygon = (values) => {
   }
 };
 
-export default internalAnglePolygon;
+export default InternalAnglePolygon;
