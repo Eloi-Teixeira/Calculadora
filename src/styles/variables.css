@@ -150,6 +150,21 @@ svg {
   margin-inline: 2rem;
 }
 
+.calc-container li svg {
+  width: 24px;
+  height: 24px;
+}
+
+.calc-container li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.page-contato p{
+  max-width: 100%;
+}
+
 /*** -------------------------------------------------------------------------------------
   - Animations
 ------------------------------------------------------------------------------------ ***/

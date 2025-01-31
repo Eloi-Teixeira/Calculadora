@@ -9,7 +9,7 @@ const Contato = () => {
     alert('Enviado');
   };
   return (
-    <section className="section-container">
+    <section className="section-container page-contato">
       <h1>Fale Conosco</h1>
       <p>
         Estamos aqui para ajudar! Se você tiver dúvidas, sugestões ou precisar

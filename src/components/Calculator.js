@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 const Calculator = () => {
   return (
-    <section className="section-container">
+    <section className="section-container calc-container">
       <h1>Navegue entre os nossas formulas</h1>
       <ul>
         <li>
