@@ -6,7 +6,6 @@ const UAM = (values) => {
     'input-EquacaoVelocidadeMUV-v': v,
   } = values;
 
-  console.log(values);
   if (!v && v0 && a && t) {
     return [{ resultName: 'v', result: Number((v0 + a * t).toFixed(2)) }];
   } else if (v && !v0 && a && t) {

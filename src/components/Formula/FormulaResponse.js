@@ -12,9 +12,12 @@ const FormulaResponse = ({
   const [value, setValue] = React.useState({});
   const [isLoading, setisLoading] = React.useState(0);
   const [error, setError] = React.useState(false);
+  const [answers, setAnswers] = React.useState(null);
 
   numberExamples = numberExamples ? numberExamples : inputValues.length - 1;
   const isValid = inputIDs?.length === inputValues?.length;
+
+  results = results ? results : inputValues;
 
   const valideInput = (e) => {
     const sanitizedInput = e.target.value.replace(/[^0-9.]/g, '');
@@ -38,6 +41,7 @@ const FormulaResponse = ({
     setisLoading(false);
     setError(false);
     console.log(answers);
+    setAnswers(answers);
   };
 
   const handleSubmit = (e) => {
@@ -78,10 +82,10 @@ const FormulaResponse = ({
       </ul>
       <h4>Respostas: </h4>
       <ul>
-        {!results
-          ? inputValues.map((input, index) => (
-              <li key={input + index}>
-                <strong>{input}: </strong>
+        {results && !answers
+          ? results.map((result, index) => (
+              <li key={result + index}>
+                <strong>{result}: </strong>
                 <span
                   className="result-value"
                   id={isValid ? `result-${inputIDs[index]}` : ``}
@@ -90,14 +94,14 @@ const FormulaResponse = ({
                 </span>
               </li>
             ))
-          : results.map((result, index) => (
-              <li key={result + index}>
-                <strong>{result}: </strong>
+          : answers.map((answer, index) => (
+              <li key={answer.resultName + index}>
+                <strong>{answer.resultName}: </strong>
                 <span
                   className="result-value"
                   id={isValid ? `result-${inputIDs[index]}` : ``}
                 >
-                  0
+                  {`${answer.result}`}
                 </span>
               </li>
             ))}

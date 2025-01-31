@@ -35,7 +35,6 @@ const AcceleratedPosition = (values) => {
   } else {
     console.error('Invalid input');
   }
-
 }
 
 export default AcceleratedPosition

@@ -5,9 +5,15 @@ const BhaskaraEquation = (values) => {
     'input-EquacaoBhaskara-c': c,
   } = values;
 
-  const delta = b ** 2 - 4 * a * c;
-  const x1 = parseFloat(((-b + Math.sqrt(delta)) / (2 * a)).toFixed(2));
-  const x2 = parseFloat(((-b - Math.sqrt(delta)) / (2 * a)).toFixed(2));
+  const delta = b * b - 4 * a * c;
+  if (delta < 0) {
+    console.error('Erro: delta negativo, raízes complexas.');
+    alert('Erro: delta negativo, raízes complexas.');
+    return [{ resultName: 'x1', result: 0 }, { resultName: 'x2', result: 0 }];
+  }
+
+  const x1 = Number(((-b + Math.sqrt(delta)) / (2 * a)).toFixed(2));
+  const x2 = Number(((-b - Math.sqrt(delta)) / (2 * a)).toFixed(2));
 
   return [
     { resultName: 'x1', result: x1 },
