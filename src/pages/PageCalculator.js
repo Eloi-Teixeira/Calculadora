@@ -7,12 +7,14 @@ import Geometry from '../components/Calculators/Geometry';
 import Angle from '../components/Calculators/Angle';
 import Strength from '../components/Calculators/Strength';
 import PageNotFound from './PageNotFound';
+import Calculator from '../components/Calculator';
 
 const PageCalculator = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Algebra />} />
+        <Route path="/" element={<Calculator />} />
+        <Route path="algebra" element={<Algebra />} />
         <Route path="percent" element={<Percent />} />
         <Route path="rooting" element={<Rooting />} />
         <Route path="geometry" element={<Geometry />} />

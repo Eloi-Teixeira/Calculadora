@@ -173,5 +173,11 @@ svg {
     padding-block: 2rem;
     padding-inline: 4rem;
   }
+
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr auto;
+  }
+  
   
 }
