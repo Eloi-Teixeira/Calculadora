@@ -222,6 +222,10 @@ svg {
 }
 
 @media (max-width: 900px) {
+  .main-container {
+    grid-template-rows: repeat(3, auto);
+  }
+
   .section-container {
     padding: 2rem;
   }
@@ -247,5 +251,7 @@ svg {
   .section-container li span {
     word-break: break-all];
   }
+
+
   
 }

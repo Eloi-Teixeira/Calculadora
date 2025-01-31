@@ -11,7 +11,7 @@ import { ReactComponent as PercentSvg } from '../assets/icons/percent.svg';
 import { ReactComponent as WeightSvg } from '../assets/icons/weight.svg';
 import { ReactComponent as TriangleSvg } from '../assets/icons/triangle.svg';
 import { ReactComponent as AngleSvg } from '../assets/icons/angle.svg';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -54,7 +54,7 @@ const Header = () => {
   return (
     <header>
       <div>
-        <NavLink to="/" className="logo-container">
+        <Link to="/" className="logo-container">
           <div className="logo-content">
             <img
               src={Logo}
@@ -63,7 +63,7 @@ const Header = () => {
               height="51px"
             />
           </div>
-        </NavLink>
+        </Link>
       </div>
       <div className="header-content">
         <nav className="nav-pages">

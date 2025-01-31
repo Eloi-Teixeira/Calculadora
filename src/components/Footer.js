@@ -7,14 +7,14 @@ import { ReactComponent as LinkedinSvg } from '../assets/icons/linkedin.svg';
 const Footer = () => {
   return (
     <footer className="footer-container">
-      <NavLink to="/" className="logo-content">
+      <Link to="/" className="logo-content">
         <img
           src={Logo}
           alt="Logo da Calculadora Completa"
           width="54px"
           height="51px"
         />
-      </NavLink>
+      </Link>
       <div className="footer-text">
         <Link to="privacity-policy">Política de Privacidade</Link>
         <p>
