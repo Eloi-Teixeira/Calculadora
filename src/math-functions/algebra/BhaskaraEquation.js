@@ -16,8 +16,8 @@ const BhaskaraEquation = (values) => {
   const x2 = Number(((-b - Math.sqrt(delta)) / (2 * a)).toFixed(2));
 
   return [
-    { resultName: 'x1', result: x1 },
-    { resultName: 'x2', result: x2 },
+    { resultName: 'x1', resultValue: x1 },
+    { resultName: 'x2', resultValue: x2 },
   ];
 };
 

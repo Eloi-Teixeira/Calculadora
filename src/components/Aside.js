@@ -32,7 +32,7 @@ const Aside = () => {
   return (
     <aside className={`aside-container ${expanded ? 'expanded' : ''}`}>
       <nav className="aside-menu">
-        <NavLink to="calc/algebra">
+        <NavLink to="calc/">
           <PiSvg />
           <span className={`text-option`}>Algebra</span>
         </NavLink>

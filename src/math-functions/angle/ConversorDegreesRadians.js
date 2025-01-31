@@ -4,14 +4,21 @@ const ConversionDegreesRadians = (values) => {
     'input-ConversaoGrausRadianos-Radianos': Radianos,
   } = values;
 
-  console.log(values);
-
   if (Graus) {
     const result = (Graus * Math.PI) / 180;
-    return [{ resultName: 'Radianos', result }];
+    return [
+      {
+        resultName: 'Radianos',
+        resultValue: Number(((Graus * Math.PI) / 180).toFixed(2)),
+      },
+    ];
   } else if (Radianos) {
-    const result = (Radianos * 180) / Math.PI;
-    return [{ resultName: 'Graus', result }];
+    return [
+      {
+        resultName: 'Graus',
+        resultValue: Number(((Radianos * 180) / Math.PI).toFixed(2)),
+      },
+    ];
   } else {
     console.error('Invalid input');
     return null;

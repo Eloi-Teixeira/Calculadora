@@ -3,12 +3,12 @@ const CircleArea = (values) => {
 
   if (area === undefined) {
     return [{
-      result: Number((Math.PI * Math.pow(r, 2)).toFixed(2)),
+      resultValue: Number((Math.PI * Math.pow(r, 2)).toFixed(2)),
       resultName: 'Área',
     }];
   } else if (r === undefined) {
     return [{
-      result: Number(Math.sqrt(area / Math.PI).toFixed(2)),
+      resultValue: Number(Math.sqrt(area / Math.PI).toFixed(2)),
       resultName: 'Raio',
     }];
   } else {

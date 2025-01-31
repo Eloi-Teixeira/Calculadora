@@ -40,7 +40,6 @@ const FormulaResponse = ({
   const showResults = (answers) => {
     setisLoading(false);
     setError(false);
-    console.log(answers);
     setAnswers(answers);
   };
 
@@ -55,8 +54,6 @@ const FormulaResponse = ({
       showResults(results);
     }
   };
-
-  console.log(value);
 
   return (
     <form className="formula-response" onSubmit={handleSubmit}>
@@ -101,7 +98,7 @@ const FormulaResponse = ({
                   className="result-value"
                   id={isValid ? `result-${inputIDs[index]}` : ``}
                 >
-                  {`${answer.result}`}
+                  {`${answer.resultValue}`}
                 </span>
               </li>
             ))}

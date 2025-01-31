@@ -6,7 +6,7 @@ import { ReactComponent as EmailSvg } from '../assets/icons/email.svg';
 const Contato = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Enviado');
+    alert('Enviado');
   };
   return (
     <section className="section-container">
@@ -19,11 +19,11 @@ const Contato = () => {
       <div className="section-contato">
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Nome</label>
-          <input type="text" name="name" id="name" autoComplete="on" />
+          <input type="text" name="name" id="name" autoComplete="off" required/>
           <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" autoComplete="on" />
+          <input type="email" name="email" id="email" autoComplete="on" required/>
           <label htmlFor="message">Mensagem</label>
-          <textarea name="message" id="message" autoComplete="off"></textarea>
+          <textarea name="message" id="message" autoComplete="off" required></textarea>
           <button>Enviar</button>
         </form>
         <span className="separator-vertical"></span>
@@ -34,7 +34,7 @@ const Contato = () => {
           </p>
           <ul>
             <li>
-              <Link to="emai">oline9473@gmail.com</Link>
+              <Link to="mailto:oline9473@gmail.com">oline9473@gmail.com</Link>
             </li>
           </ul>
           <p>

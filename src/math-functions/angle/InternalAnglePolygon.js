@@ -4,13 +4,20 @@ const InternalAnglePolygon = (values) => {
     'input-AnguloInternoPoligono-n': n,
   } = values;
 
-  console.log(n, internalAngle);
   if (n) {
-    const result = ((n - 2) * 180) / n;
-    return [{ resultName: 'Ângulo Interno', result }];
+    return [
+      {
+        resultName: 'Ângulo Interno',
+        resultValue: Number((((n - 2) * 180) / n).toFixed(2)),
+      },
+    ];
   } else if (internalAngle) {
-    const result = 360 / (internalAngle - 180);
-    return [{ resultName: 'n', result }];
+    return [
+      {
+        resultName: 'n',
+        resultValue: Number((360 / (internalAngle - 180)).toFixed(2)),
+      },
+    ];
   } else {
     console.error('Invalid input');
     return null;

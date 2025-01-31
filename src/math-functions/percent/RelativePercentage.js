@@ -8,19 +8,19 @@ const RelativePercentage = (values) => {
   if (percentage === undefined) {
     return [{
       resultName: 'Percentual',
-      result: Number(((part / total) * 100).toFixed(2)),
+      resultValue: Number(((part / total) * 100).toFixed(2)),
     }]
   }
   if (part === undefined) {
     return [{
       resultName: 'Percentual',
-      result: Number(((percentage * total) / 100).toFixed(2)),
+      resultValue: Number(((percentage * total) / 100).toFixed(2)),
     }]
   }
   if (percentage === undefined) {
     return [{
       resultName: 'Percentual',
-      result: Number(((part * 100) / percentage).toFixed(2)),
+      resultValue: Number(((part * 100) / percentage).toFixed(2)),
     }]
   }
 };

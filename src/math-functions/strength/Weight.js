@@ -6,11 +6,11 @@ const Weight = (values) => {
   } = values;
 
   if (w && g && !m) {
-    return [{ resultName: 'm', result: w / g }];
+    return [{ resultName: 'm', resultValue: Number((w / g).toFixed(2)) }];
   } else if (w && !g && m) {
-    return [{ resultName: 'g', result: w / m }];
+    return [{ resultName: 'g', resultValue: Number((w / m).toFixed(2)) }];
   } else if (!w && g && m) {
-    return [{ resultName: 'P', result: m * g }];
+    return [{ resultName: 'P', resultValue: Number((m * g).toFixed(2)) }];
   } else {
     console.error('Invalid input');
   }

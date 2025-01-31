@@ -11,19 +11,19 @@ const PercentageValue = (values) => {
   if (percentage === undefined) {
     return [{
       resultName: 'P%',
-      result: Number(((part / value) * 100).toFixed(2)),
+      resultValue: Number(((part / value) * 100).toFixed(2)),
     }]
   }
   if (part === undefined) {
     return [{
       resultName: 'P',
-      result: Number(((percentage * value) / 100).toFixed(2)),
+      resultValue: Number(((percentage * value) / 100).toFixed(2)),
     }]
   }
   if (value === undefined) {
     return [{
       resultName: 'V',
-      result: Number(((part * 100) / percentage).toFixed(2)),
+      resultValue: Number(((part * 100) / percentage).toFixed(2)),
     }]
   }
 }

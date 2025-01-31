@@ -4,15 +4,28 @@ const CentralAngleCircle = (values) => {
     'input-AnguloCentralCirculo-Arco': arcLength,
     'input-AnguloCentralCirculo-Raio': radius,
   } = values;
+
   if (centralAngle && arcLength) {
-    const result = arcLength / centralAngle;
-    return [{ resultName: 'Raio', result }];
+    return [
+      {
+        resultName: 'Raio',
+        resultValue: Number((arcLength / centralAngle).toFixed(2)),
+      },
+    ];
   } else if (arcLength && radius) {
-    const result = arcLength / radius;
-    return [{ resultName: 'Ângulo Central', result }];
+    return [
+      {
+        resultName: 'Ângulo Central',
+        resultValue: Number((arcLength / radius).toFixed(2)),
+      },
+    ];
   } else if (radius && centralAngle) {
-    const result = centralAngle * radius;
-    return [{ resultName: 'Arco', result }];
+    return [
+      {
+        resultName: 'Arco',
+        resultValue: Number((centralAngle * radius).toFixed(2)),
+      },
+    ];
   } else {
     console.error('Invalid input');
     return null;

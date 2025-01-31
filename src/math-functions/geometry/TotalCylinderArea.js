@@ -7,17 +7,17 @@ const TotalCylinderArea = (values) => {
 
   if (area === undefined) {
     return [{
-      result: Number((2 * Math.PI * raio * (raio + h)).toFixed(2)),
+      resultValue: Number((2 * Math.PI * raio * (raio + h)).toFixed(2)),
       resultName: 'Área Total',
     }];
   } else if (h === undefined) {
     return [{
-      result: Number((area / (2 * Math.PI * raio)).toFixed(2)),
+      resultValue: Number((area / (2 * Math.PI * raio)).toFixed(2)),
       resultName: 'Altura',
     }];
   } else if (raio === undefined) {
     return [{
-      result: Number(
+      resultValue: Number(
         (area / (2 * Math.PI * h)).toFixed(2)
       ),
       resultName: 'Raio',

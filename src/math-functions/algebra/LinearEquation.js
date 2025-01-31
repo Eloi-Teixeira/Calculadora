@@ -1,16 +1,3 @@
-const linearEquationY = (x, m, b) => {
-  return m * x + b;
-};
-const linearEquationM = (x, y, b) => {
-  return (y - b) / x;
-};
-const linearEquationX = (y, m, b) => {
-  return (y - b) / m;
-};
-const linearEquationB = (x, m, y) => {
-  return y - m * x;
-};
-
 const ManageLinearEquation = (values) => {
   const {
     'input-EquacaoLinear-x': x,
@@ -24,27 +11,26 @@ const ManageLinearEquation = (values) => {
 
   switch (true) {
     case x === undefined:
-      result = linearEquationX(y, m, b);
+      result = (y - b) / m;
       resultName = 'x';
       break;
     case m === undefined:
-      result = linearEquationM(x, y, b);
+      result = (y - b) / x;
       resultName = 'm';
       break;
     case b === undefined:
-      result = linearEquationB(x, m, y);
+      result = y - m * x;
       resultName = 'b';
       break;
     case y === undefined:
-      result = linearEquationY(x, m, b);
+      result = m * x + b;
       resultName = 'y';
       break;
     default:
-      console.log('Invalid equation type');
+      console.e('Invalid equation type');
   }
 
-  result = Number(result.toFixed(2));
-  return [{ resultName, result }];
+  return [{ resultName, resultValue: Number(result.toFixed(2)) }];
 };
 
 export default ManageLinearEquation;

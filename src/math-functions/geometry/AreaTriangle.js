@@ -7,17 +7,17 @@ const AreaTriangle = (values) => {
 
   if (Area === undefined) {
     return [{
-      result: Number((base * h / 2).toFixed(2)),
+      resultValue: Number((base * h / 2).toFixed(2)),
       resultName: 'Área',
     }];
   } else if (base === undefined) {
     return [{
-      result: Number((Area * 2 / h).toFixed(2)),
+      resultValue: Number((Area * 2 / h).toFixed(2)),
       resultName: 'Base',
     }];
   } else if (h === undefined) {
     return [{
-      result: Number((Area * 2 / base).toFixed(2)),
+      resultValue: Number((Area * 2 / base).toFixed(2)),
       resultName: 'Altura',
     }];
   } else {

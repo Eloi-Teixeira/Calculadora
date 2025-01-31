@@ -6,11 +6,11 @@ const AverageSpeed = (values) => {
   } = values;
 
   if (!v && ΔS && Δt) {
-    return [{ resultName: 'v', result: Number((ΔS / Δt).toFixed(2)) }];
+    return [{ resultName: 'v', resultValue: Number((ΔS / Δt).toFixed(2)) }];
   } else if (v && !ΔS && Δt) {
-    return [{ resultName: 'ΔS', result: Number((v * Δt).toFixed(2)) }];
+    return [{ resultName: 'ΔS', resultValue: Number((v * Δt).toFixed(2)) }];
   } else if (v && ΔS && !Δt) {
-    return [{ resultName: 'Δt', result: Number((ΔS / v).toFixed(2)) }];
+    return [{ resultName: 'Δt', resultValue: Number((ΔS / v).toFixed(2)) }];
   } else {
     console.error('Invalid input values');
   }

@@ -7,6 +7,7 @@ import PageCalculator from './pages/PageCalculator';
 import Contato from './pages/PageContato';
 import Aside from './components/Aside';
 import PagePrivacityPolicy from './pages/PagePrivacityPolicy';
+import PageNotFound from './pages/PageNotFound';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="calc/*" element={<PageCalculator />}/>
           <Route path="contact" element={<Contato />} />
           <Route path="privacity-policy" element={<PagePrivacityPolicy />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </main>

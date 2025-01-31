@@ -6,11 +6,11 @@ const ForceCalculation = (values) => {
   } = values;
 
   if (!F && a && m) {
-    return [{ resultName: 'F', result: Number((m * a).toFixed(2)) }];
+    return [{ resultName: 'F', resultValue: Number((m * a).toFixed(2)) }];
   } else if (F && !a && m) {
-    return [{ resultName: 'a', result: Number((F / m).toFixed(2)) }];
+    return [{ resultName: 'a', resultValue: Number((F / m).toFixed(2)) }];
   } else if (F && a && !m) {
-    return [{ resultName: 'm', result: Number((F / a).toFixed(2)) }];
+    return [{ resultName: 'm', resultValue: Number((F / a).toFixed(2)) }];
   } else {
     console.error('Invalid input');
   }

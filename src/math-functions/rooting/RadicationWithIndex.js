@@ -6,18 +6,20 @@ const RadicationWithIndex = (values) => {
   } = values;
 
   if (indice && radicando && !resultado) {
-    return [{ resultName: 'r', result: Math.pow(radicando, 1 / indice) }];
+    return [{ resultName: 'r', resultValue: Math.pow(radicando, 1 / indice) }];
   } else if (indice && !radicando && resultado) {
-    return [{ resultName: 'x', result: Math.pow(resultado, indice) }];
+    return [{ resultName: 'x', resultValue: Math.pow(resultado, indice) }];
   } else if (!indice && radicando && resultado) {
     return [
       {
         resultName: 'n',
-        result: Number((Math.log(resultado) / Math.log(radicando)).toFixed(2)),
+        resultValue: Number(
+          (Math.log(resultado) / Math.log(radicando)).toFixed(2),
+        ),
       },
     ];
   } else {
-    console.log('invalid input');
+    console.error('invalid input');
   }
 };
 
