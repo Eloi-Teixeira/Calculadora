@@ -6,6 +6,7 @@ import Rooting from '../components/Calculators/Rooting';
 import Geometry from '../components/Calculators/Geometry';
 import Angle from '../components/Calculators/Angle';
 import Strength from '../components/Calculators/Strength';
+import PageNotFound from './PageNotFound';
 
 const PageCalculator = () => {
   return (
