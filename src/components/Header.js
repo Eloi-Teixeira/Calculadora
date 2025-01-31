@@ -85,7 +85,7 @@ const Header = () => {
         <div>
           <button
             className="btn-theme"
-            aria-label="Troca de tema"
+            aria-label="Alternar entre tema claro e escuro"
             onClick={handleThemeChange}
           >
             <MoonSVG className="sun" />
@@ -97,12 +97,16 @@ const Header = () => {
         <button
           className={`btn-menu-mobile ${isMenuOpen ? 'active' : ''}`}
           onClick={handleActiveMobileMenu}
+          aria-label={
+            isMenuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'
+          }
+          aria-expanded={isMenuOpen}
         >
           <span className="bar-menu-mobile"></span>
           <span className="bar-menu-mobile"></span>
           <span className="bar-menu-mobile"></span>
         </button>
-        <nav className="nav-mobile">
+        <nav className="nav-mobile" aria-label="Menu de navegação móvel">
           <ul>
             <li className="menu-mobile-item">
               <NavLink to="/" onClick={handleActiveMobileMenu}>
@@ -159,11 +163,15 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="menu-mobile-item">
-              <button className="btn-theme-mobile" onClick={handleThemeChange}>
+              <button
+                className="btn-theme-mobile"
+                onClick={handleThemeChange}
+                aria-label="Alternar entre tema claro e escuro"
+              >
                 <span>
                   <SunSVG className="sun" /> <MoonSVG className="moon" />
                 </span>
-                {isDarkMode ? 'Modo Escuro' : 'Modo Claro' }
+                {isDarkMode ? 'Modo Escuro' : 'Modo Claro'}
               </button>
             </li>
             <li className="btn-mobile-close" onClick={handleActiveMobileMenu}>

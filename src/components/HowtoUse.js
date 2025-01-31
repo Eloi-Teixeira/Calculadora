@@ -6,9 +6,9 @@ const HowtoUse = () => {
       <h2>Como Funciona?</h2>
       <span className="separator-horizontal"></span>
       <ul>
-        <li>Escolha uma fórmula na lista acima.</li>
-        <li>Insira os valores necessários.</li>
-        <li>Espere o resultado.</li>
+        <li>Escolha a fórmula correspondente ao cálculo que deseja realizar.</li>
+        <li>Preencha os valores necessários no campo solicitado.</li>
+        <li>Clique em Calcular para obter o resultado.</li>
       </ul>
       <p>Com esta ferramenta, a matemática nunca foi tão simples e prática!</p>
     </>

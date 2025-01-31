@@ -64,6 +64,10 @@
   color: var(--brown);
 }
 
+.formula-response li {
+  display: flex;
+}
+
 .formula-response ul input:focus {
   border-bottom: 2px solid var(--golden);
 }
@@ -147,7 +151,8 @@ body.dark-mode .error {
   .formula-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    gap: 1rem;
+
+    gap: 2rem;
   }
 
   .formula-container span.separator-vertical {
@@ -157,5 +162,6 @@ body.dark-mode .error {
 
   .formula-response {
     max-width: 100%;
+    grid-template-areas: 'example' 'titleForm' 'formula1' 'titleResponse' 'formula2' 'button' 'error';
   }
 }

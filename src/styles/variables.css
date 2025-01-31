@@ -15,7 +15,7 @@ footer {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-thumb,
@@ -26,7 +26,6 @@ footer {
 ::-webkit-scrollbar-thumb {
   background-color: var(--brown);
 }
-
 
 .main-container {
   min-height: 100dvh;
@@ -113,18 +112,22 @@ svg {
 .section-container li {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
-  display: flex;
+  display: inline-block;
   align-items: center;
+  position: relative;
+  margin-left: 28px;
 }
 
 .section-container li::before {
   content: '';
-  display: inline-block;
-  width: 8px;
+  min-width: 8px;
   height: 8px;
-  border-radius: 100%;
+  border-radius: 8px;
   background-color: var(--golden);
   margin-right: 1rem;
+  position: absolute;
+  left: -28px;
+  top: 40%;
 }
 
 .section-container label {
@@ -135,7 +138,7 @@ svg {
 .section-container .separator-horizontal {
   width: 80%;
   height: 2px;
-  border-radius: 100%;
+  border-radius: 2px;
   background-color: var(--brown);
   transform: translateY(-1rem);
 }
@@ -144,7 +147,7 @@ svg {
   width: 2px;
   height: 90%;
   place-self: center;
-  border-radius: 100%;
+  border-radius: 2px;
   background-color: var(--brown);
   opacity: 0.2;
   margin-inline: 2rem;
@@ -161,7 +164,7 @@ svg {
   gap: 20px;
 }
 
-.page-contato p{
+.page-contato p {
   max-width: 100%;
 }
 
@@ -177,7 +180,6 @@ svg {
     opacity: 1;
   }
 }
-
 
 /*** -------------------------------------------------------------------------------------
   - Media Queries
@@ -251,7 +253,18 @@ svg {
   .section-container li span {
     word-break: break-all];
   }
+}
 
+@media (max-width: 600px) {
+  .section-container h1 {
+    font-size: 1.75rem;
+  }
 
-  
+  .section-container strong {
+    display: inline-block;
+  }
+
+  .section-container li::before {
+    margin-right: 0.5rem;
+  }
 }

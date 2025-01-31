@@ -6,7 +6,7 @@ import { ReactComponent as LinkedinSvg } from '../assets/icons/linkedin.svg';
 
 const Footer = () => {
   return (
-    <footer className="footer-container">
+    <footer className={`footer-container `}>
       <Link to="/" className="logo-content">
         <img
           src={Logo}

@@ -64,13 +64,14 @@ const FormulaResponse = ({
       <ul>
         {inputValues.map((input, index) => (
           <li key={input + index}>
-            <label htmlFor={`input-${inputIDs[index]}`}>{input}: </label>
+            <label htmlFor={`input-${inputIDs[index]}`} aria-label={`label-${inputIDs[index]}`} >{input}: </label>
             <input
               type="text"
               name={`input-${inputIDs[index]}`}
               id={isValid ? `input-${inputIDs[index]}` : ``}
               className="input-value"
               aria-invalid={!isValid}
+              aria-labelledby={`label-${inputIDs[index]}`} 
               onChange={valideInput}
               autoComplete="off"
             />
@@ -104,7 +105,7 @@ const FormulaResponse = ({
             ))}
       </ul>
       {isLoading ? (
-        <button className="button-calculate" disabled>
+        <button className="button-calculate" aria-label="Calculando o resultado da equação" disabled>
           Carregando
           <div className="dots">
             <div></div>
@@ -113,7 +114,7 @@ const FormulaResponse = ({
           </div>
         </button>
       ) : (
-        <button className="button-calculate">Calcular</button>
+        <button className="button-calculate" aria-label="Calcular o resultado da equação">Calcular</button>
       )}
       {error && (
         <span className="error">
