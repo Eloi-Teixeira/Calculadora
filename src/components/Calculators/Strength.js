@@ -20,6 +20,7 @@ const Strength = () => {
           'Massa do objeto (em quilogramas, kg).',
           'Aceleração do objeto (em metros por segundo ao quadrado, m/s²).',
         ]}
+        type={'forceCalculation'}
       />
 
       <FormulaContainer
@@ -36,6 +37,7 @@ const Strength = () => {
           'Distância percorrida (em metros, m).',
           'Tempo gasto para percorrer a distância (em segundos, s).',
         ]}
+        type={'averageSpeed'}
       />
 
       <FormulaContainer
@@ -52,6 +54,7 @@ const Strength = () => {
           'Variação da velocidade (diferença entre velocidade final e inicial).',
           'Intervalo de tempo (em segundos, s).',
         ]}
+        type={'averageAcceleration'}
       />
 
       <FormulaContainer
@@ -72,11 +75,12 @@ const Strength = () => {
           'Aceleração (em m/s²).',
           'Tempo (em segundos, s).',
         ]}
+        type={'uam'}
       />
 
       <FormulaContainer
         title={'Equação da Posição no Movimento Uniformemente Acelerado (MUV)'}
-        example={'S = S₀ + v₀t + (1/2) a t²'}
+        example={'S = S₀ + v₀ * t + (1/2) * a * t²'}
         values={['S', 'S₀', 'v₀', 't', 'a']}
         inputIDs={[
           'EquacaoPosicaoMUV-S',
@@ -92,6 +96,7 @@ const Strength = () => {
           'Tempo decorrido.',
           'Aceleração do movimento.',
         ]}
+        type={'acceleratedPosition'}
       />
 
       <FormulaContainer
@@ -104,6 +109,7 @@ const Strength = () => {
           'Massa do objeto (em quilogramas, kg).',
           'Aceleração da gravidade (9,8 m/s² na Terra).',
         ]}
+        type={'weight'}
       />
 
       <HowtoUse />

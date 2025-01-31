@@ -20,6 +20,12 @@ import RelativePercentage from './percent/RelativePercentage.js';
 import SquareRoot from './rooting/SquareRoot.js';
 import CubicRoot from './rooting/CubicRoot.js';
 import RadicationWithIndex from './rooting/RadicationWithIndex.js';
+import ForceCalculation from './strength/ForceCalculation.js';
+import AverageSpeed from './strength/AverageSpeed.js';
+import AverageAcceleration from './strength/AverageAcceleration.js';
+import UAM from './strength/UAM.js';
+import AcceleratedPosition from './strength/AcceleratedPosition.js';
+import Weight from './strength/Weight.js';
 
 const useMathFunctions = (type, values) => {
   let result;
@@ -90,6 +96,24 @@ const useMathFunctions = (type, values) => {
       break;
     case 'radicationWithIndex':
       result = RadicationWithIndex(values);
+      break;
+    case 'forceCalculation':
+      result = ForceCalculation(values);
+      break;
+    case 'averageSpeed':
+      result = AverageSpeed(values);
+      break;
+    case 'averageAcceleration':
+      result = AverageAcceleration(values);
+      break;
+    case 'uam':
+      result = UAM(values);
+      break;
+    case 'acceleratedPosition':
+      result = AcceleratedPosition(values);
+      break;
+    case 'weight':
+      result = Weight(values);
       break;
     default:
       console.error('Invalid equation type');

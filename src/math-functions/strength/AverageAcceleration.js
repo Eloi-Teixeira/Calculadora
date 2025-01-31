@@ -1,0 +1,19 @@
+const AverageAcceleration = (values) => {
+  const {
+    'input-CalculoAceleracaoMedia-a': a,
+    'input-CalculoAceleracaoMedia-Δv': Δv,
+    'input-CalculoAceleracaoMedia-Δt': Δt,
+  } = values;
+
+  if (!a && Δv && Δt) {
+    return [{ resultName: 'a', result: Number((Δv / Δt).toFixed(2)) }];
+  } else if (a && !Δv && Δt) {
+    return [{ resultName: 'Δv', result: Number((a * Δt).toFixed(2)) }];
+  } else if (a && Δv && !Δt) {
+    return [{ resultName: 'Δt', result: Number((Δv / a).toFixed(2)) }];
+  } else {
+    console.error('Invalid input values');
+  }
+};
+
+export default AverageAcceleration;
