@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bef88ac8.css",
+    "main.js": "/static/js/main.cb34a107.js",
+    "index.html": "/index.html",
+    "static/media/home.svg": "/static/media/home.4fc5ea2b1a672de42a8bcf084481b5ff.svg",
+    "static/media/moon.svg": "/static/media/moon.8fd438789b261c4dc73468c3d5bed8c9.svg",
+    "static/media/contact.svg": "/static/media/contact.9416a0c666552ac85d3d1fb6ce81281c.svg",
+    "static/media/github.svg": "/static/media/github.45de8549a3737c1a82e1f163a2be2bd6.svg",
+    "static/media/sun.svg": "/static/media/sun.d180246e2cd7070ff568532a47983ab0.svg",
+    "static/media/calculator.svg": "/static/media/calculator.481d9f0e5fc4e7de7ade78268e9fe170.svg",
+    "static/media/clock.svg": "/static/media/clock.758a591dc03c419d765090e20a116ec6.svg",
+    "static/media/email.svg": "/static/media/email.80f98943dc5da6e2392600a52ef05895.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.5b3e00f5c141795c9e81c9cc18180beb.svg",
+    "static/media/weight.svg": "/static/media/weight.41901cf4a283d685df7c26777bd4ba47.svg",
+    "static/media/triangle.svg": "/static/media/triangle.ba05d589ff55113d0e403786a564e7d2.svg",
+    "static/media/angle.svg": "/static/media/angle.37ba78d3f87268e2b688aa46710e963a.svg",
+    "static/media/pi.svg": "/static/media/pi.be4b92874d301729ba87eb3395f758cb.svg",
+    "static/media/percent.svg": "/static/media/percent.cd28c478a907f3e579afffd21cc70d90.svg",
+    "static/media/root.svg": "/static/media/root.94ce4f8950b52e117d872de9f9753023.svg",
+    "static/media/box-arrow.svg": "/static/media/box-arrow.54cd55394d616bcde94962f220f7dd24.svg",
+    "main.bef88ac8.css.map": "/static/css/main.bef88ac8.css.map",
+    "main.cb34a107.js.map": "/static/js/main.cb34a107.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bef88ac8.css",
+    "static/js/main.cb34a107.js"
+  ]
+}

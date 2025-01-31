@@ -1,0 +1,21 @@
+{
+  "name": "Calculadora Matemática Online",
+  "short_name": "Calculadora",
+  "description": "Resolva cálculos matemáticos instantaneamente! Suporte para Bhaskara, logaritmos, áreas, volumes e muito mais. Perfeito para estudantes e professores!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff9ea",
+  "theme_color": "#554c4c",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
