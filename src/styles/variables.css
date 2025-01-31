@@ -107,6 +107,8 @@ svg {
 
 .section-container ul {
   margin-block: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-container li {
@@ -124,7 +126,6 @@ svg {
   height: 8px;
   border-radius: 8px;
   background-color: var(--golden);
-  margin-right: 1rem;
   position: absolute;
   left: -28px;
   top: 40%;
@@ -249,10 +250,6 @@ svg {
   .section-container p {
     font-size: 0.9rem;
   }
-
-  .section-container li span {
-    word-break: break-all];
-  }
 }
 
 @media (max-width: 600px) {
@@ -262,9 +259,5 @@ svg {
 
   .section-container strong {
     display: inline-block;
-  }
-
-  .section-container li::before {
-    margin-right: 0.5rem;
   }
 }
