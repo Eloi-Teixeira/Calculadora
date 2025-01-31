@@ -25,7 +25,7 @@ const Calculator = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/calc/root">
+          <NavLink to="/calc/rooting">
             <RootSvg />
             Radiciação
           </NavLink>
@@ -43,9 +43,9 @@ const Calculator = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/calc/weight">
+          <NavLink to="/calc/strength">
             <WeightSvg />
-            Peso
+            Força
           </NavLink>
         </li>
       </ul>
